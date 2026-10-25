@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Attributes and Skills</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 1900px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 0 8px; min-height: 52px">
+<a href="Create1.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back" style="width: 44px; height: 44px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">New character</span>
+<a href="Main.dc.html" class="btn btn-ghost inked" style="min-height: 44px; text-decoration: none">Cancel</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 10px 22px 16px">
+<span class="kicker tnum">Step 2 of 4 · [Archetype B]</span>
+<h1 class="screen-title" style="margin: 0">Attributes and Skills</h1>
+<div class="bar" style="height: 6px"><div style="width: 50%; background: var(--color-accent-500)"></div></div>
+<p class="muted" style="margin: 4px 0 0; font-size: 14px; line-height: 1.5">Your archetype filled these in. Tap a mark to add or remove a tweak. Marks from your archetype are locked.</p>
+</div>
+<div style="position: sticky; top: 0; z-index: 5; background: var(--q-parch); border-top: 1px solid var(--q-rule); border-bottom: 1px solid var(--q-rule); padding: 10px 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div style="display: flex; flex-direction: column; align-items: center"><span class="label">Attribute</span><span class="heading tnum" style="font-size: 20px; color: {{aColor}}">{{aLeft}} left</span></div>
+<div style="display: flex; flex-direction: column; align-items: center"><span class="label">Training</span><span class="heading tnum" style="font-size: 20px; color: {{tColor}}">{{tLeft}} left</span></div>
+<div style="display: flex; flex-direction: column; align-items: center"><span class="label">Focus</span><span class="heading tnum" style="font-size: 20px; color: {{fColor}}">{{fLeft}} left</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 22px 8px">
+<span class="kicker">Attributes</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{attrs}}" as="t" hint-placeholder-count="3">
+<div class="panel" style="display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px 8px">
+<span class="label">{{t.name}}</span>
+<span class="portrait tnum" style="width: 56px; height: 56px; font-size: 28px; font-weight: 600">{{t.val}}</span>
+<span class="meta tnum" style="font-size: 11px">{{t.note}}</span>
+<div style="display: flex; gap: 4px">
+<button class="btn btn-icon btn-secondary" aria-label="Lower {{t.name}}" onClick="{{t.dec}}" disabled="{{t.noDec}}" style="width: 40px; height: 40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<button class="btn btn-icon btn-secondary" aria-label="Raise {{t.name}}" onClick="{{t.inc}}" disabled="{{t.noInc}}" style="width: 40px; height: 40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 22px 8px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between">
+<span class="kicker">Skills</span>
+<span class="meta" style="gap: 10px"><span><span style="width: 11px; height: 11px; background: var(--color-accent-800); border-radius: 2px"></span>Archetype</span><span><span style="width: 11px; height: 11px; background: var(--color-accent-400); border: 1.5px solid var(--color-accent-700); border-radius: 2px; box-sizing: border-box"></span>Your tweak</span></span>
+</div>
+<div class="panel" style="overflow: hidden">
+<div style="display: flex; align-items: center; padding: 6px 10px 6px 14px">
+<span style="flex: 1"></span>
+<span class="label" style="width: 84px; text-align: center">Training</span>
+<span class="label" style="width: 84px; text-align: center">Focus</span>
+</div>
+<sc-for list="{{skills}}" as="s" hint-placeholder-count="24">
+<div style="display: flex; align-items: center; min-height: 44px; padding: 0 10px 0 14px; border-top: 1px solid var(--q-rule)">
+<span style="flex: 1; font-size: 15px">{{s.name}}</span>
+<span style="display: flex; width: 84px; justify-content: center">
+<sc-for list="{{s.tr}}" as="b" hint-placeholder-count="3">
+<button onClick="{{b.tap}}" aria-label="{{s.name}} training {{b.n}}" style="width: 28px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; padding: 0; cursor: pointer">
+<span style="width: 14px; height: 14px; box-sizing: border-box; border-radius: 2px; border: 1.5px solid {{b.line}}; background: {{b.fill}}"></span>
+</button>
+</sc-for>
+</span>
+<span style="display: flex; width: 84px; justify-content: center">
+<sc-for list="{{s.fo}}" as="b" hint-placeholder-count="3">
+<button onClick="{{b.tap}}" aria-label="{{s.name}} focus {{b.n}}" style="width: 28px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; padding: 0; cursor: pointer">
+<span style="width: 11px; height: 11px; box-sizing: border-box; transform: rotate(45deg); border: 1.5px solid {{b.line}}; background: {{b.fill}}"></span>
+</button>
+</sc-for>
+</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 22px 8px">
+<span class="kicker">Worked out for you</span>
+<div class="panel" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0">
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px"><span class="label">Initiative</span><span class="heading tnum" style="font-size: 20px">[n]</span></div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--q-rule)"><span class="label">Awareness</span><span class="heading tnum" style="font-size: 20px">[n]</span></div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--q-rule)"><span class="label">Mettle</span><span class="heading tnum" style="font-size: 20px">[n]</span></div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--q-rule)"><span class="label">Melee</span><span class="heading" style="font-size: 18px">[Rating]</span></div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--q-rule); border-left: 1px solid var(--q-rule)"><span class="label">Accuracy</span><span class="heading" style="font-size: 18px">[Rating]</span></div>
+<div style="padding: 10px; display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--q-rule); border-left: 1px solid var(--q-rule)"><span class="label">Defence</span><span class="heading" style="font-size: 18px">[Rating]</span></div>
+</div>
+</div>
+<div style="flex: 1"></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 22px 26px; border-top: 1px solid var(--q-rule); background: var(--q-parch)">
+<sc-if value="{{hasLeft}}" hint-placeholder-val="{{true}}">
+<span class="meta" style="justify-content: center">Spend every tweak to continue.</span>
+</sc-if>
+<div style="display: flex; gap: 10px">
+<a href="Create1.dc.html" class="btn btn-secondary" style="flex: 1; min-height: 48px; text-decoration: none; color: var(--q-ink)">Back</a>
+<a href="Create3.dc.html" class="btn btn-primary inked" style="flex: 2; min-height: 48px; text-decoration: none; opacity: {{nextOpacity}}">Next: Talents</a>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { aX: { Body: 0, Mind: 0, Soul: 0 }, tX: {}, fX: {} };
+  }
+  renderVals() {
+    const BUDGET = { a: 1, t: 3, f: 2 };
+    const baseA = { Body: 3, Mind: 2, Soul: 2 };
+    const base = [
+      ['Arcana', 0, 0], ['Athletics', 2, 1], ['Awareness', 1, 0], ['Ballistic Skill', 0, 0],
+      ['Beast Handling', 0, 0], ['Channelling', 0, 0], ['Crafting', 0, 0], ['Determination', 1, 0],
+      ['Devotion', 0, 0], ['Dexterity', 0, 0], ['Entertain', 0, 0], ['Fortitude', 2, 1],
+      ['Guile', 0, 0], ['Intimidation', 1, 0], ['Intuition', 0, 0], ['Lore', 0, 0],
+      ['Medicine', 0, 0], ['Might', 1, 0], ['Nature', 0, 0], ['Reflexes', 1, 0],
+      ['Stealth', 0, 0], ['Survival', 0, 0], ['Theology', 0, 0], ['Weapon Skill', 2, 2]
+    ];
+    const s = this.state;
+    const sum = (o) => Object.values(o).reduce((x, y) => x + y, 0);
+    const aLeft = BUDGET.a - sum(s.aX), tLeft = BUDGET.t - sum(s.tX), fLeft = BUDGET.f - sum(s.fX);
+    const attrs = ['Body', 'Mind', 'Soul'].map((name) => {
+      const x = s.aX[name];
+      return {
+        name, val: baseA[name] + x,
+        note: x ? 'Archetype ' + baseA[name] + ' +' + x : 'From archetype',
+        noDec: x === 0, noInc: aLeft <= 0,
+        dec: () => this.setState({ aX: { ...s.aX, [name]: x - 1 } }),
+        inc: () => this.setState({ aX: { ...s.aX, [name]: x + 1 } })
+      };
+    });
+    const marks = (b, x, key, left, i) => [0, 1, 2].map((k) => {
+      const isBase = k < b, isX = !isBase && k < b + x;
+      const tap = () => {
+        if (isBase) return;
+        const cur = s[key][i] || 0;
+        const want = k + 1 - b;
+        let next = isX ? k - b : want;
+        if (next - cur > left) return;
+        this.setState({ [key]: { ...s[key], [i]: next } });
+      };
+      return {
+        n: k + 1, tap,
+        fill: isBase ? 'var(--color-accent-800)' : isX ? 'var(--color-accent-400)' : 'transparent',
+        line: isBase ? 'var(--color-accent-800)' : isX ? 'var(--color-accent-700)' : 'var(--color-accent-600)'
+      };
+    });
+    const skills = base.map(([name, t, f], i) => ({
+      name,
+      tr: marks(t, s.tX[i] || 0, 'tX', tLeft, i),
+      fo: marks(f, s.fX[i] || 0, 'fX', fLeft, i)
+    }));
+    const col = (n) => (n > 0 ? 'var(--q-wax)' : 'var(--q-moss)');
+    const hasLeft = aLeft + tLeft + fLeft > 0;
+    return {
+      attrs, skills, aLeft, tLeft, fLeft,
+      aColor: col(aLeft), tColor: col(tLeft), fColor: col(fLeft),
+      hasLeft, nextOpacity: hasLeft ? 0.45 : 1
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-25T13:00:00Z"},
+  "title": "Soulbound Character Sheet",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "Start", "is_interactive": true},
+    "Create1.dc.html": {"x": 470, "y": 0, "w": 390, "h": 1100, "title": "Create 1 · Archetype", "is_interactive": true},
+    "Create2.dc.html": {"x": 940, "y": 0, "w": 390, "h": 1900, "title": "Create 2 · Attributes and Skills", "is_interactive": true},
+    "Create3.dc.html": {"x": 1410, "y": 0, "w": 390, "h": 1250, "title": "Create 3 · Talents and gear", "is_interactive": true},
+    "Create4.dc.html": {"x": 1880, "y": 0, "w": 390, "h": 1500, "title": "Create 4 · Details", "is_interactive": true},
+    "Sheet.dc.html": {"x": 0, "y": 2320, "w": 390, "h": 3130, "title": "Sheet · main tab", "is_interactive": true},
+    "SheetTalent.dc.html": {"x": 470, "y": 2320, "w": 390, "h": 844, "title": "Sheet · talent opened", "is_interactive": true},
+    "AddXP.dc.html": {"x": 940, "y": 2320, "w": 390, "h": 844, "title": "Add XP", "is_interactive": true},
+    "SpendXP.dc.html": {"x": 1410, "y": 2320, "w": 390, "h": 844, "title": "Spend XP", "is_interactive": true},
+    "Menu.dc.html": {"x": 1880, "y": 2320, "w": 390, "h": 844, "title": "Character menu", "is_interactive": true},
+    "Inventory.dc.html": {"x": 0, "y": 6290, "w": 390, "h": 1250, "title": "Inventory tab", "is_interactive": true},
+    "InventoryItem.dc.html": {"x": 470, "y": 6290, "w": 390, "h": 844, "title": "Inventory · item opened", "is_interactive": true},
+    "Notes.dc.html": {"x": 940, "y": 6290, "w": 390, "h": 844, "title": "Notes tab", "is_interactive": true},
+    "NoteEdit.dc.html": {"x": 1410, "y": 6290, "w": 390, "h": 844, "title": "Note editor", "is_interactive": true},
+    "SheetTablet.dc.html": {"x": 0, "y": 7960, "w": 834, "h": 2100, "title": "Sheet · tablet", "is_interactive": true}
+  },
+  "order": [
+    "Main.dc.html", "Create1.dc.html", "Create2.dc.html", "Create3.dc.html", "Create4.dc.html",
+    "Sheet.dc.html", "SheetTalent.dc.html", "AddXP.dc.html", "SpendXP.dc.html", "Menu.dc.html",
+    "Inventory.dc.html", "InventoryItem.dc.html", "Notes.dc.html", "NoteEdit.dc.html",
+    "SheetTablet.dc.html"
+  ],
+  "notes": {
+    "row1": {"x": 0, "y": -300, "text": "Start and character creation", "kind": "title1", "maxW": 2270},
+    "row2": {"x": 0, "y": 2020, "text": "The sheet, XP and menu", "kind": "title1", "maxW": 2270},
+    "row3": {"x": 0, "y": 5990, "text": "Inventory and Notes", "kind": "title1", "maxW": 1800},
+    "row4": {"x": 0, "y": 7660, "text": "Tablet", "kind": "title1", "maxW": 834}
+  },
+  "designSystems": [
+    {"title": "Questlog", "namespace": "questlog", "artifact": "https://claude.ai/code/artifact/23f87026-e6d9-45d8-83aa-e6cc001d3436", "version": "1792931991-5278", "copiedAt": "2026-10-25T13:00:00Z"}
+  ]
+}

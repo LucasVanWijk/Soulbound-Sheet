@@ -1,0 +1,93 @@
+/* Questlog — generated from tokens.json */
+@font-face { font-family: "Cormorant Garamond"; src: url('fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url('fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lora"; src: url('fonts/lora-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lora"; src: url('fonts/lora-latin-400-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Lora"; src: url('fonts/lora-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+:root, [data-theme="parchment"] {
+  --q-parch: #feead1;
+  --q-parch-2: #fde0bb;
+  --q-ink: var(--color-accent-900);
+  --q-rule: #3a270d2e;
+  --q-wax: oklch(0.45 0.14 27);
+  --q-wax-hi: oklch(0.6 0.15 30);
+  --q-moss: oklch(0.45 0.08 148);
+  --q-tint: #facb8d59;
+  --color-bg: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-text: #201f1d;
+  --color-accent: #b68235;
+  --color-accent-2: #ac803e;
+  --color-divider: #201f1d29;
+  --color-neutral-100: #f8f4f4;
+  --color-neutral-200: #eae7e7;
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+  --color-neutral-900: #2d2b2b;
+  --color-accent-100: #fff3e4;
+  --color-accent-200: #ffe3bf;
+  --color-accent-300: #facb8d;
+  --color-accent-400: #e1ad66;
+  --color-accent-500: #c28d41;
+  --color-accent-600: #a06f24;
+  --color-accent-700: #7d5411;
+  --color-accent-800: #5a3b0a;
+  --color-accent-900: #3a270d;
+  --color-accent-2-100: #fff3e4;
+  --color-accent-2-200: #ffe3be;
+  --color-accent-2-300: #f5cd96;
+  --color-accent-2-400: #dbaf70;
+  --color-accent-2-500: #bc8f4e;
+  --color-accent-2-600: #9b7232;
+  --color-accent-2-700: #79561f;
+  --color-accent-2-800: #573d14;
+  --color-accent-2-900: #382810;
+  --zone-crisis: var(--q-wax);
+  --zone-crisis-light: oklch(0.74 0.12 30);
+  --zone-main: var(--color-accent-700);
+  --zone-main-light: var(--color-accent-300);
+  --zone-errand: oklch(0.45 0.08 255);
+  --zone-errand-light: oklch(0.77 0.07 255);
+  --zone-side: oklch(0.46 0.07 195);
+  --zone-side-light: oklch(0.78 0.07 195);
+  --cal-event: #1f5fbf;
+  --cal-deadline: #b8321a;
+  --cal-birthday: #c94f9c;
+  --cal-glossary: #1a8a55;
+  --shadow-sm: 0 1px 2px #2d2b2b24;
+  --shadow-md: 0 3px 10px #2d2b2b29;
+  --shadow-lg: 0 12px 32px #2d2b2b38;
+}
+:root {
+  --space-1: 4.6px;
+  --space-2: 9.2px;
+  --space-3: 13.8px;
+  --space-4: 18.4px;
+  --space-6: 27.6px;
+  --space-8: 36.8px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 7px;
+  --font-heading: "Cormorant Garamond", system-ui, sans-serif;
+  --font-body: "Lora", system-ui, sans-serif;
+}
+.h1 { font-family: var(--font-heading); font-size: 42px; line-height: 1.12; font-weight: 600; letter-spacing: -0.015em; }
+.screen-title { font-family: var(--font-heading); font-size: 34px; line-height: 1.12; font-weight: 600; letter-spacing: -0.015em; }
+.h2 { font-family: var(--font-heading); font-size: 32px; line-height: 1.12; font-weight: 600; letter-spacing: -0.015em; }
+.title-sheet { font-family: var(--font-heading); font-size: 26px; line-height: 1.2; font-weight: 600; }
+.h3 { font-family: var(--font-heading); font-size: 25px; line-height: 1.12; font-weight: 600; letter-spacing: -0.015em; }
+.week-num { font-family: var(--font-heading); font-size: 21px; line-height: 1; font-weight: 600; }
+.h4 { font-family: var(--font-heading); font-size: 20px; line-height: 1.12; font-weight: 600; letter-spacing: -0.015em; }
+.nav-item { font-family: var(--font-heading); font-size: 19px; line-height: 1.2; font-weight: 600; }
+.title-card { font-family: var(--font-heading); font-size: 17px; line-height: 1.2; font-weight: 600; }
+.button-text { font-family: var(--font-heading); font-size: 14px; line-height: 1.2; font-weight: 600; }
+.body { font-family: var(--font-body); font-size: 15px; line-height: 1.55; font-weight: 400; }
+.body-small { font-family: var(--font-body); font-size: 13px; line-height: 1.4; font-weight: 400; }
+.meta-text { font-family: var(--font-body); font-size: 12px; line-height: 1.4; font-weight: 400; }
+.kicker-text { font-family: var(--font-body); font-size: 11px; line-height: 1.4; font-weight: 400; letter-spacing: 0.16em; }
+.label-text { font-family: var(--font-body); font-size: 11px; line-height: 1.4; font-weight: 400; letter-spacing: 0.14em; }
+.caption { font-family: var(--font-body); font-size: 11px; line-height: 1.35; font-weight: 400; }

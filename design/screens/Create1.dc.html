@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Choose an archetype</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 1100px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 0 8px; min-height: 52px">
+<a href="Main.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back to start" style="width: 44px; height: 44px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">New character</span>
+<a href="Main.dc.html" class="btn btn-ghost inked" style="min-height: 44px; text-decoration: none">Cancel</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 10px 22px 18px">
+<span class="kicker tnum">Step 1 of 4</span>
+<h1 class="screen-title" style="margin: 0">Choose an archetype</h1>
+<div class="bar" style="height: 6px"><div style="width: 25%; background: var(--color-accent-500)"></div></div>
+<p class="muted" style="margin: 4px 0 0; font-size: 14px; line-height: 1.5">Your archetype sets your species, Attributes, Skills, Core Talent and starting gear. You can tweak a little in the next step.</p>
+</div>
+<div class="hscroll" style="gap: 6px; padding: 0 22px 14px">
+<button class="chip" aria-pressed="true" style="padding: 8px 14px; min-height: 40px">All</button>
+<button class="chip" style="padding: 8px 14px; min-height: 40px">[Species A]</button>
+<button class="chip" style="padding: 8px 14px; min-height: 40px">[Species B]</button>
+<button class="chip" style="padding: 8px 14px; min-height: 40px">[Species C]</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 22px">
+<sc-for list="{{arcs}}" as="a" hint-placeholder-count="6">
+<div style="border: 1px solid {{a.border}}; background: {{a.bg}}; border-radius: var(--radius-md); overflow: hidden">
+<button onClick="{{a.pick}}" aria-pressed="{{a.sel}}" style="display: flex; align-items: center; gap: 14px; width: 100%; padding: 12px 14px; min-height: 68px; border: 0; background: transparent; color: var(--q-ink); text-align: left; cursor: pointer; font-family: var(--font-body)">
+<span class="portrait" style="width: 44px; height: 44px; font-size: 22px">{{a.initial}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span class="heading" style="font-size: 18px">{{a.name}}</span>
+<span class="meta">[Species] · Core Skill: [Skill]</span>
+</span>
+<span style="width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--color-accent-800); display: grid; place-items: center; flex: none">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: {{a.dot}}"></span>
+</span>
+</button>
+<sc-if value="{{a.sel}}" hint-placeholder-val="{{false}}">
+<div style="border-top: 1px solid var(--q-rule); padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 10px">
+<span class="kicker">What it gives you</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0; border: 1px solid var(--q-rule); border-radius: var(--radius-md)"><span class="label">Body</span><span class="heading tnum" style="font-size: 24px">[n]</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0; border: 1px solid var(--q-rule); border-radius: var(--radius-md)"><span class="label">Mind</span><span class="heading tnum" style="font-size: 24px">[n]</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0; border: 1px solid var(--q-rule); border-radius: var(--radius-md)"><span class="label">Soul</span><span class="heading tnum" style="font-size: 24px">[n]</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<div style="display: flex; gap: 10px"><span class="bullet" style="margin-top: 7px"></span><span>Core Talent: [Talent name]</span></div>
+<div style="display: flex; gap: 10px"><span class="bullet" style="margin-top: 7px"></span><span>Skills: [Skill], [Skill], [Skill] +[n] more</span></div>
+<div style="display: flex; gap: 10px"><span class="bullet" style="margin-top: 7px"></span><span>Choose [n] Talents from [n]</span></div>
+<div style="display: flex; gap: 10px"><span class="bullet" style="margin-top: 7px"></span><span>Starting gear: [Item], [Item] +[n] more</span></div>
+</div>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+<div style="flex: 1"></div>
+<div style="display: flex; gap: 10px; padding: 14px 22px 26px; border-top: 1px solid var(--q-rule); background: var(--q-parch)">
+<a href="Main.dc.html" class="btn btn-secondary" style="flex: 1; min-height: 48px; text-decoration: none; color: var(--q-ink)">Back</a>
+<a href="Create2.dc.html" class="btn btn-primary inked" style="flex: 2; min-height: 48px; text-decoration: none">Next: Attributes</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1100}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { picked: 1 }; }
+  renderVals() {
+    const names = ['[Archetype A]', '[Archetype B]', '[Archetype C]', '[Archetype D]', '[Archetype E]', '[Archetype F]'];
+    const arcs = names.map((name, i) => {
+      const sel = this.state.picked === i;
+      return {
+        name, initial: String.fromCharCode(65 + i), sel,
+        border: sel ? 'var(--color-accent-700)' : 'var(--q-rule)',
+        bg: sel ? 'var(--q-tint)' : 'transparent',
+        dot: sel ? 'var(--color-accent-800)' : 'transparent',
+        pick: () => this.setState({ picked: i })
+      };
+    });
+    return { arcs };
+  }
+}
+</script>
+</body>
+</html>

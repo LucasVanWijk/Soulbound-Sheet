@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Start</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column; padding: 28px 22px 26px; gap: 26px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span class="seal heading" style="width: 34px; height: 34px; font-size: 18px">S</span>
+<span class="heading" style="font-size: 25px">Soulbound Sheets</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span class="kicker">Welcome back</span>
+<h1 class="screen-title" style="margin: 0">Your characters</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<a href="Create1.dc.html" class="btn btn-primary inked" style="min-height: 50px; font-size: 17px; text-decoration: none; gap: 8px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+Create character</a>
+<button class="btn btn-secondary" style="min-height: 50px; font-size: 17px; gap: 8px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+Load from file (.json)</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="kicker">On this device</span>
+<div class="panel" style="overflow: hidden">
+<sc-for list="{{chars}}" as="c" hint-placeholder-count="3">
+<a href="Sheet.dc.html" class="row-btn" style="gap: 14px; padding: 12px 14px; min-height: 68px; text-decoration: none; border-top: {{c.border}}">
+<span class="portrait" style="width: 44px; height: 44px; font-size: 22px">{{c.initial}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span class="heading ellipsis" style="font-size: 18px">{{c.name}}</span>
+<span class="meta tnum">{{c.sub}}</span>
+</span>
+<span class="pill tnum">{{c.xp}}</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+</a>
+</sc-for>
+</div>
+</div>
+<div style="flex: 1"></div>
+<p class="muted" style="margin: 0; font-size: 13px; line-height: 1.5; font-style: italic">Characters are saved in this browser only. Download a .json backup from the character menu to keep one safe.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const chars = [
+      { initial: 'A', name: '[Character name A]', sub: '[Archetype] · [Species]', xp: '5 / 12 XP' },
+      { initial: 'B', name: '[Character name B]', sub: '[Archetype] · [Species]', xp: '0 / 30 XP' },
+      { initial: 'C', name: '[Character name C]', sub: '[Archetype] · [Species]', xp: '2 / 4 XP' }
+    ].map((c, i) => ({ ...c, border: i === 0 ? '0' : '1px solid var(--q-rule)' }));
+    return { chars };
+  }
+}
+</script>
+</body>
+</html>

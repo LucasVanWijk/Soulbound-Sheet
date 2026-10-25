@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Character details</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 1500px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 0 8px; min-height: 52px">
+<a href="Create3.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back" style="width: 44px; height: 44px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">New character</span>
+<a href="Main.dc.html" class="btn btn-ghost inked" style="min-height: 44px; text-decoration: none">Cancel</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 10px 22px 16px">
+<span class="kicker tnum">Step 4 of 4 · [Archetype B]</span>
+<h1 class="screen-title" style="margin: 0">Who are they?</h1>
+<div class="bar" style="height: 6px"><div style="width: 100%; background: var(--color-accent-500)"></div></div>
+</div>
+<div style="display: flex; gap: 14px; padding: 4px 22px 16px; align-items: stretch">
+<button class="dashed-btn" style="width: 120px; height: 150px; flex-direction: column; gap: 8px; font-size: 14px; white-space: normal; text-align: center; flex: none">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+Add portrait</button>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; justify-content: center">
+<label for="cname" class="label">Character name</label>
+<input id="cname" class="input" placeholder="Name" style="min-height: 46px; font-size: 18px; font-family: var(--font-heading); font-weight: 600">
+<span class="meta">[Archetype B] · [Species]</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0 22px 16px">
+<div class="field" style="display: flex; flex-direction: column; gap: 5px"><label for="age" class="label">Age</label><input id="age" class="input" placeholder="—" style="min-height: 44px"></div>
+<div class="field" style="display: flex; flex-direction: column; gap: 5px"><label for="eyes" class="label">Eyes</label><input id="eyes" class="input" placeholder="—" style="min-height: 44px"></div>
+<div class="field" style="display: flex; flex-direction: column; gap: 5px"><label for="hair" class="label">Hair</label><input id="hair" class="input" placeholder="—" style="min-height: 44px"></div>
+<div class="field" style="display: flex; flex-direction: column; gap: 5px"><label for="height" class="label">Height</label><input id="height" class="input" placeholder="—" style="min-height: 44px"></div>
+<div class="field" style="display: flex; flex-direction: column; gap: 5px"><label for="weight" class="label">Weight</label><input id="weight" class="input" placeholder="—" style="min-height: 44px"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; padding: 0 22px 18px">
+<label for="feat" class="label">Distinguishing features</label>
+<textarea id="feat" class="input" placeholder="Scars, marks, how they carry themselves" style="min-height: 72px"></textarea>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 6px 22px 18px; border-top: 1px solid var(--q-rule)">
+<span class="kicker" style="margin-top: 12px">Goals</span>
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="g1" class="label">Short-term goal</label><input id="g1" class="input" placeholder="What do they want soon?" style="min-height: 44px"></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="g2" class="label">Long-term goal</label><input id="g2" class="input" placeholder="What drives them?" style="min-height: 44px"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 6px 22px 18px; border-top: 1px solid var(--q-rule)">
+<span class="kicker" style="margin-top: 12px">Connections</span>
+<div class="panel" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px 10px 14px; min-height: 52px">
+<span style="flex: 1; display: flex; flex-direction: column"><span class="heading" style="font-size: 17px">[Connection name]</span><span class="meta">[Who they are to you]</span></span>
+<button class="btn btn-icon btn-ghost inked" aria-label="Remove connection" style="width: 44px; height: 44px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<button class="dashed-btn" style="min-height: 48px; font-size: 16px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add connection</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; padding: 6px 22px 18px; border-top: 1px solid var(--q-rule)">
+<label for="bg" class="kicker" style="margin-top: 12px">Background</label>
+<textarea id="bg" class="input" placeholder="Where they come from. Saved as a pinned note." style="min-height: 110px"></textarea>
+</div>
+<div style="flex: 1"></div>
+<div style="display: flex; gap: 10px; padding: 14px 22px 26px; border-top: 1px solid var(--q-rule); background: var(--q-parch)">
+<a href="Create3.dc.html" class="btn btn-secondary" style="flex: 1; min-height: 48px; text-decoration: none; color: var(--q-ink)">Back</a>
+<a href="Sheet.dc.html" class="btn btn-primary inked" style="flex: 2; min-height: 48px; text-decoration: none; gap: 8px">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+Create character</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

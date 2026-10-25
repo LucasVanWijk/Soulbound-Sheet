@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inventory</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 1250px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column">
+<div style="display: flex; align-items: flex-start; gap: 8px; padding: 18px 10px 4px 22px">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+<span class="kicker">[Character name]</span>
+<h1 class="screen-title" style="margin: 0">Inventory</h1>
+</div>
+<a href="Menu.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Character menu" style="width: 44px; height: 44px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></a>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px 22px 20px">
+<span class="kicker">Currency</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div class="panel" style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px"><span class="label">Drops</span><span class="heading tnum" style="font-size: 26px">[n]</span></div>
+<div class="panel" style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px"><span class="label">Phials</span><span class="heading tnum" style="font-size: 26px">[n]</span></div>
+<div class="panel" style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px"><span class="label">Spheres</span><span class="heading tnum" style="font-size: 26px">[n]</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 0 22px 20px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between"><span class="kicker">Items</span><span class="meta tnum">6 items</span></div>
+<div class="panel" style="overflow: hidden">
+<sc-for list="{{items}}" as="i" hint-placeholder-count="6">
+<a href="InventoryItem.dc.html" class="row-btn" style="gap: 12px; min-height: 54px; padding: 0 12px 0 14px; text-decoration: none; border-top: {{i.border}}">
+<span style="flex: 1; display: flex; flex-direction: column"><span class="heading" style="font-size: 17px">{{i.name}}</span><span class="meta">{{i.meta}}</span></span>
+<sc-if value="{{i.qty}}" hint-placeholder-val="{{false}}"><span class="pill tnum">×{{i.qty}}</span></sc-if>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</a>
+</sc-for>
+</div>
+<button class="dashed-btn" style="min-height: 48px; font-size: 16px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add item</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 0 22px 20px">
+<span class="kicker">Spells and Miracles</span>
+<div class="panel" style="overflow: hidden">
+<sc-for list="{{spells}}" as="i" hint-placeholder-count="3">
+<a href="SheetTalent.dc.html" class="row-btn" style="gap: 12px; min-height: 54px; padding: 0 12px 0 14px; text-decoration: none; border-top: {{i.border}}">
+<span style="flex: 1; display: flex; flex-direction: column"><span class="heading" style="font-size: 17px">{{i.name}}</span><span class="meta">{{i.meta}}</span></span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</a>
+</sc-for>
+</div>
+<button class="dashed-btn" style="min-height: 48px; font-size: 16px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add spell or Miracle</button>
+</div>
+
+<div style="flex: 1"></div>
+<nav class="tabbar" aria-label="Sheet sections" style="grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 0">
+<a href="Sheet.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 58px; text-decoration: none; color: var(--color-accent-700); font-size: 11px; letter-spacing: .03em">
+<span style="width: 22px; height: 2px; margin-bottom: 6px"></span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg>
+Sheet</a>
+<a href="Inventory.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 58px; text-decoration: none; color: var(--q-ink); font-weight: 600; font-size: 11px; letter-spacing: .03em">
+<span style="width: 22px; height: 2px; margin-bottom: 6px; background: var(--q-wax)"></span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M8 10h8"></path><path d="M8 18h8"></path><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg>
+Inventory</a>
+<a href="Notes.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 58px; text-decoration: none; color: var(--color-accent-700); font-size: 11px; letter-spacing: .03em">
+<span style="width: 22px; height: 2px; margin-bottom: 6px"></span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"></path><path d="M16 8 2 22"></path><path d="M17.5 15H9"></path></svg>
+Notes</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const b = (i) => (i === 0 ? '0' : '1px solid var(--q-rule)');
+    const items = [
+      { name: '[Weapon name]', meta: 'Weapon' },
+      { name: '[Weapon name]', meta: 'Weapon' },
+      { name: '[Armour name]', meta: 'Armour' },
+      { name: '[Shield name]', meta: 'Shield' },
+      { name: '[Gear item]', meta: 'Gear', qty: 3 },
+      { name: '[Gear item]', meta: 'Gear' }
+    ].map((x, i) => ({ qty: 0, ...x, border: b(i) }));
+    const spells = [
+      { name: '[Spell name]', meta: 'Spell · [Lore]' },
+      { name: '[Spell name]', meta: 'Spell · [Lore]' },
+      { name: '[Miracle name]', meta: 'Miracle · [God]' }
+    ].map((x, i) => ({ ...x, border: b(i) }));
+    return { items, spells };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Talent details</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column; position: relative; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 8px; padding: 14px 10px 10px 8px; border-bottom: 1px solid var(--q-rule)">
+<a href="Sheet.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back to sheet" style="width: 44px; height: 44px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">[Character name] · Sheet</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 22px 0; position: relative">
+<span class="kicker">Talents</span>
+<div class="panel" style="overflow: visible; position: relative">
+<sc-for list="{{talents}}" as="t" hint-placeholder-count="5">
+<div style="position: relative">
+<button onClick="{{t.tap}}" aria-expanded="{{t.open}}" class="row-btn" style="gap: 10px; min-height: 50px; padding: 0 12px 0 14px; border-top: {{t.border}}; background: {{t.bg}}">
+<span class="heading" style="flex: 1; font-size: 17px">{{t.name}}</span>
+<sc-if value="{{t.core}}" hint-placeholder-val="{{false}}"><span class="tag tag-accent" style="font-size: 11px; padding: 1px 7px; border-radius: 3px">Core</span></sc-if>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<sc-if value="{{t.open}}" hint-placeholder-val="{{false}}">
+<div role="dialog" aria-label="{{t.name}}" style="position: absolute; left: -8px; right: -8px; top: 54px; z-index: 10; background: var(--q-parch); border: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px">
+<span style="position: absolute; top: -7px; left: 40px; width: 12px; height: 12px; transform: rotate(45deg); background: var(--q-parch); border-left: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent); border-top: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent)"></span>
+<div style="display: flex; align-items: flex-start; gap: 8px">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span class="kicker">Talent</span>
+<span class="heading" style="font-size: 21px">{{t.name}}</span>
+</div>
+<button class="btn btn-icon btn-ghost inked" aria-label="Close" onClick="{{close}}" style="width: 40px; height: 40px; margin: -6px -8px 0 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">[Effect text from the talent data. Terms with their own entry are underlined, like
+<button onClick="{{openTerm}}" aria-expanded="{{termOpen}}" style="display: inline; padding: 0; border: 0; background: transparent; font: inherit; color: var(--color-accent-700); text-decoration: underline dotted; text-underline-offset: 3px; cursor: pointer">[Keyword]</button>, and open a second popover.]</p>
+<div class="meta tnum" style="gap: 4px 14px"><span>Requires: [Prerequisite]</span><span>Source: [Book], p. [n]</span></div>
+<sc-if value="{{termOpen}}" hint-placeholder-val="{{false}}">
+<div role="dialog" aria-label="Keyword" style="position: relative; margin: 2px 0 0 18px; background: color-mix(in srgb, var(--color-accent-100) 80%, var(--q-parch)); border: 1px solid var(--color-accent-600); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 8px">
+<span class="label" style="flex: 1">Keyword · [Keyword]</span>
+<button class="btn btn-icon btn-ghost inked" aria-label="Close keyword" onClick="{{closeTerm}}" style="width: 36px; height: 36px; margin: -6px -6px -6px 0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5">[Short rules definition of the keyword.]</p>
+</div>
+</sc-if>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="padding: 22px 22px 0; display: flex; flex-direction: column; gap: 8px; opacity: .55">
+<span class="kicker">Goals</span>
+<div class="panel" style="padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><span class="label">Short-term</span><span>[Short-term goal]</span></div>
+</div>
+<p class="muted" style="margin: auto 22px 26px; font-size: 13px; font-style: italic">Spells, Miracles and items open the same way.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: 1, term: true }; }
+  renderVals() {
+    const s = this.state;
+    const talents = [
+      { name: '[Core Talent name]', core: true }, { name: '[Talent name]' }, { name: '[Talent name]' }, { name: '[Talent name]' }, { name: '[Talent name]' }
+    ].map((t, i) => {
+      const open = s.open === i;
+      return {
+        core: false, ...t, open,
+        border: i === 0 ? '0' : '1px solid var(--q-rule)',
+        bg: open ? 'var(--q-tint)' : 'transparent',
+        tap: () => this.setState({ open: open ? -1 : i, term: false })
+      };
+    });
+    return {
+      talents, termOpen: s.term,
+      close: () => this.setState({ open: -1, term: false }),
+      openTerm: () => this.setState({ term: !s.term }),
+      closeTerm: () => this.setState({ term: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Character menu</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); position: relative; overflow: hidden">
+<div aria-hidden="true" style="padding: 18px 22px; display: flex; flex-direction: column; gap: 6px">
+<span class="kicker">[Archetype] · [Species]</span>
+<span class="screen-title">[Character name]</span>
+</div>
+<a href="Sheet.dc.html" class="scrim" aria-label="Close" style="display: block"></a>
+<sc-if value="{{saved}}" hint-placeholder-val="{{true}}">
+<div class="toast show" role="status" style="position: absolute; top: 24px; left: 22px; right: 22px; z-index: 50; display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--q-parch); border: 1px solid var(--q-rule); border-radius: var(--radius-md); box-shadow: var(--shadow-md); font-size: 14px">
+<span class="seal" style="width: 24px; height: 24px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>
+<span class="tnum" style="flex: 1">Backup saved · [character-name].json</span>
+</div>
+</sc-if>
+<div class="sheet" role="dialog" aria-label="Character menu" style="max-height: none">
+<div class="sheet-body" style="gap: 12px">
+<span class="grabber"></span>
+<div style="display: flex; align-items: center; gap: 12px">
+<span class="portrait" style="width: 44px; height: 44px; font-size: 22px">A</span>
+<div style="display: flex; flex-direction: column"><span class="heading" style="font-size: 20px">[Character name]</span><span class="meta tnum">Last saved [date] · 5 / 12 XP</span></div>
+</div>
+<div class="panel" style="overflow: hidden">
+<button class="row-btn" onClick="{{download}}" style="gap: 14px; min-height: 54px; padding: 0 14px; border-top: 0">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+<span style="flex: 1; display: flex; flex-direction: column"><span class="heading" style="font-size: 17px">Download character</span><span class="meta">Save a .json file you keep yourself</span></span>
+</button>
+<a href="Create4.dc.html" class="row-btn" style="gap: 14px; min-height: 54px; padding: 0 14px; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>
+<span class="heading" style="flex: 1; font-size: 17px">Edit details</span>
+</a>
+<button class="row-btn" onClick="{{toggleLog}}" aria-expanded="{{logOpen}}" style="gap: 14px; min-height: 54px; padding: 0 14px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>
+<span class="heading" style="flex: 1; font-size: 17px">XP log</span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<sc-if value="{{logOpen}}" hint-placeholder-val="{{true}}">
+<div style="padding: 0 14px 8px 48px; display: flex; flex-direction: column">
+<sc-for list="{{log}}" as="l" hint-placeholder-count="4">
+<div class="tnum" style="display: flex; align-items: center; gap: 10px; min-height: 36px; border-top: 1px solid var(--q-rule); font-size: 13px">
+<span style="flex: 1">{{l.what}}</span>
+<span class="heading" style="font-size: 15px; color: {{l.color}}">{{l.xp}}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<a href="Main.dc.html" class="row-btn" style="gap: 14px; min-height: 54px; padding: 0 14px; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>
+<span class="heading" style="flex: 1; font-size: 17px">Switch character</span>
+</a>
+</div>
+<button class="danger-btn" style="min-height: 48px; gap: 8px; display: flex; align-items: center; justify-content: center">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+Delete character</button>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { saved: true, log: true }; }
+  renderVals() {
+    const s = this.state;
+    const wax = 'var(--q-wax)', moss = 'var(--q-moss)';
+    const log = [
+      { what: 'Athletics training 1 → 2', xp: '−[n]', color: wax },
+      { what: 'Session 3', xp: '+4', color: moss },
+      { what: '[Talent name] learned', xp: '−[n]', color: wax },
+      { what: 'Session 2', xp: '+4', color: moss }
+    ];
+    return {
+      saved: s.saved, logOpen: s.log, log,
+      download: () => this.setState({ saved: true }),
+      toggleLog: () => this.setState({ log: !s.log })
+    };
+  }
+}
+</script>
+</body>
+</html>

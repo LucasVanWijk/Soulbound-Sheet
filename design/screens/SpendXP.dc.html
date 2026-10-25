@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spend XP</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); position: relative; overflow: hidden">
+<div aria-hidden="true" style="padding: 18px 22px; display: flex; flex-direction: column; gap: 6px">
+<span class="kicker">[Archetype] · [Species]</span>
+<span class="screen-title">[Character name]</span>
+</div>
+<a href="Sheet.dc.html" class="scrim" aria-label="Close" style="display: block"></a>
+<div class="sheet" role="dialog" aria-label="Spend XP" style="top: 64px; max-height: none; display: flex; flex-direction: column; overflow: hidden">
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 10px 22px 12px">
+<span class="grabber"></span>
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span class="kicker">Spend XP</span>
+<span class="heading tnum" style="font-size: 26px">{{left}} XP to spend</span>
+</div>
+<a href="Menu.dc.html" class="btn btn-ghost inked" style="min-height: 44px; text-decoration: none; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>XP log</a>
+</div>
+<div class="seg" role="radiogroup" aria-label="What to raise" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<label class="seg-opt" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 600; font-size: 15px"><input type="radio" name="tab" checked="{{t.on}}" onChange="{{t.pick}}">{{t.name}}</label>
+</sc-for>
+</div>
+</div>
+<div style="flex: 1; overflow-y: auto; border-top: 1px solid var(--q-rule)">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 12px 22px; border-bottom: 1px solid var(--q-rule); background: {{r.bg}}">
+<div style="display: flex; align-items: center; gap: 10px">
+<span class="heading" style="flex: 1; font-size: 18px">{{r.name}}</span>
+<span class="meta tnum">{{r.now}}</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{r.opts}}" as="o" hint-placeholder-count="2">
+<button class="btn {{o.cls}}" onClick="{{o.pick}}" disabled="{{o.off}}" aria-pressed="{{o.sel}}" style="min-height: 44px; flex-direction: column; gap: 0; padding: 4px 6px; line-height: 1.15">
+<span>{{o.label}}</span>
+<span class="tnum" style="font-family: var(--font-body); font-weight: 400; font-size: 11px">{{o.cost}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 12px 22px 26px; border-top: 1px solid var(--q-rule); background: var(--q-parch)">
+<sc-if value="{{hasPick}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span style="display: flex; flex-direction: column"><span class="label">Buying</span><span class="heading" style="font-size: 17px">{{pickLabel}}</span></span>
+<span class="pill tnum">[n] XP</span>
+</div>
+</sc-if>
+<a href="Sheet.dc.html" class="btn btn-primary inked" style="min-height: 50px; text-decoration: none; opacity: {{confirmOpacity}}">Confirm purchase</a>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'Skills', pick: 'Athletics|Training' }; }
+  renderVals() {
+    const s = this.state;
+    const tabs = ['Skills', 'Talents', 'Attributes'].map((name) => ({ name, on: s.tab === name, pick: () => this.setState({ tab: name, pick: null }) }));
+    const mk = (name, now, opts) => ({
+      name, now,
+      bg: s.pick && s.pick.startsWith(name + '|') ? 'var(--q-tint)' : 'transparent',
+      opts: opts.map(([label, cost, off]) => {
+        const key = name + '|' + label;
+        const sel = s.pick === key;
+        return {
+          label: off ? label : '+ ' + label, cost: off || cost, off: !!off, sel,
+          cls: sel ? 'btn-primary inked' : 'btn-secondary',
+          pick: () => this.setState({ pick: sel ? null : key })
+        };
+      })
+    });
+    let rows;
+    if (s.tab === 'Skills') {
+      rows = [
+        mk('Athletics', 'Training 2 · Focus 1', [['Training', '[n] XP'], ['Focus', '[n] XP']]),
+        mk('Awareness', 'Training 1 · Focus 0', [['Training', '[n] XP'], ['Focus', '[n] XP']]),
+        mk('Weapon Skill', 'Training 3 · Focus 2', [['Training', '', 'At cap'], ['Focus', '[n] XP']]),
+        mk('Fortitude', 'Training 2 · Focus 1', [['Training', '[n] XP'], ['Focus', '', 'Not enough XP']]),
+        mk('Might', 'Training 1 · Focus 0', [['Training', '[n] XP'], ['Focus', '[n] XP']]),
+        mk('Reflexes', 'Training 1 · Focus 0', [['Training', '[n] XP'], ['Focus', '[n] XP']])
+      ];
+    } else if (s.tab === 'Talents') {
+      rows = [1, 2, 3, 4, 5].map((i) => mk('[Talent name ' + i + ']', '[Source]', [['Learn', '[n] XP'], ['Details', 'Opens popover']]));
+    } else {
+      rows = [['Body', 3], ['Mind', 2], ['Soul', 2]].map(([n, v]) => mk(n, 'Now ' + v, [['Raise to ' + (v + 1), '[n] XP'], ['Max', '', 'Cap [n]']]));
+    }
+    const hasPick = !!s.pick;
+    const pickLabel = hasPick ? s.pick.replace('|', ' · ') : '';
+    return { tabs, rows, hasPick, pickLabel, left: 5, confirmOpacity: hasPick ? 1 : 0.45 };
+  }
+}
+</script>
+</body>
+</html>

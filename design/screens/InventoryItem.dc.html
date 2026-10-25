@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Item details</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 8px; padding: 14px 10px 10px 8px; border-bottom: 1px solid var(--q-rule)">
+<a href="Inventory.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back to inventory" style="width: 44px; height: 44px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">Inventory</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px 22px 0">
+<span class="kicker">Items</span>
+<div class="panel" style="overflow: visible">
+<sc-for list="{{items}}" as="t" hint-placeholder-count="6">
+<div style="position: relative">
+<button onClick="{{t.tap}}" aria-expanded="{{t.open}}" class="row-btn" style="gap: 12px; min-height: 54px; padding: 0 12px 0 14px; border-top: {{t.border}}; background: {{t.bg}}">
+<span style="flex: 1; display: flex; flex-direction: column"><span class="heading" style="font-size: 17px">{{t.name}}</span><span class="meta">{{t.meta}}</span></span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<sc-if value="{{t.open}}" hint-placeholder-val="{{false}}">
+<div role="dialog" aria-label="{{t.name}}" style="position: absolute; left: -8px; right: -8px; top: 58px; z-index: 10; background: var(--q-parch); border: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px">
+<span style="position: absolute; top: -7px; left: 40px; width: 12px; height: 12px; transform: rotate(45deg); background: var(--q-parch); border-left: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent); border-top: 1px solid color-mix(in srgb, var(--color-accent-800) 35%, transparent)"></span>
+<div style="display: flex; align-items: flex-start; gap: 8px">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span class="kicker">{{t.meta}}</span><span class="heading" style="font-size: 21px">{{t.name}}</span></div>
+<button class="btn btn-icon btn-ghost inked" aria-label="Close" onClick="{{close}}" style="width: 40px; height: 40px; margin: -6px -8px 0 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<div class="tnum" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 8px 0; border-top: 1px solid var(--q-rule); border-bottom: 1px solid var(--q-rule)">
+<span style="display: flex; flex-direction: column"><span class="label">Damage</span><span class="heading" style="font-size: 18px">[dmg]</span></span>
+<span style="display: flex; flex-direction: column"><span class="label">Cost</span><span class="heading" style="font-size: 18px">[cost]</span></span>
+<span style="display: flex; flex-direction: column"><span class="label">Availability</span><span class="heading" style="font-size: 18px">[n]</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span class="label">Traits</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button class="chip" aria-pressed="{{traitOpen}}" aria-expanded="{{traitOpen}}" onClick="{{openTrait}}" style="min-height: 40px; padding: 0 12px">[Trait A]</button>
+<button class="chip" style="min-height: 40px; padding: 0 12px">[Trait B]</button>
+</div>
+</div>
+<sc-if value="{{traitOpen}}" hint-placeholder-val="{{false}}">
+<div role="dialog" aria-label="Trait A" style="margin-left: 18px; background: color-mix(in srgb, var(--color-accent-100) 80%, var(--q-parch)); border: 1px solid var(--color-accent-600); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 8px">
+<span class="label" style="flex: 1">Trait · [Trait A]</span>
+<button class="btn btn-icon btn-ghost inked" aria-label="Close trait" onClick="{{closeTrait}}" style="width: 36px; height: 36px; margin: -6px -6px -6px 0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5">[What the trait does, from the equipment data.]</p>
+</div>
+</sc-if>
+<p style="margin: 0; font-size: 14px; line-height: 1.5" class="muted">[Description from the equipment data.]</p>
+<div style="display: flex; gap: 8px">
+<button class="btn btn-secondary" style="flex: 1; min-height: 44px">Edit</button>
+<button class="danger-btn" style="flex: 1; min-height: 44px">Remove</button>
+</div>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: 0, trait: true }; }
+  renderVals() {
+    const s = this.state;
+    const items = [
+      { name: '[Weapon name]', meta: 'Weapon' }, { name: '[Weapon name]', meta: 'Weapon' },
+      { name: '[Armour name]', meta: 'Armour' }, { name: '[Shield name]', meta: 'Shield' },
+      { name: '[Gear item]', meta: 'Gear' }, { name: '[Gear item]', meta: 'Gear' }
+    ].map((t, i) => {
+      const open = s.open === i;
+      return {
+        ...t, open,
+        border: i === 0 ? '0' : '1px solid var(--q-rule)',
+        bg: open ? 'var(--q-tint)' : 'transparent',
+        tap: () => this.setState({ open: open ? -1 : i, trait: false })
+      };
+    });
+    return {
+      items, traitOpen: s.trait,
+      close: () => this.setState({ open: -1, trait: false }),
+      openTrait: () => this.setState({ trait: !s.trait }),
+      closeTrait: () => this.setState({ trait: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

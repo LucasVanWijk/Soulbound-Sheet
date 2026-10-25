@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Talents and gear</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/questlog/tokens.css">
+<link rel="stylesheet" href="ds/questlog/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#7d5411}a:hover{color:#5a3b0a}
+</style>
+</helmet>
+<div style="width: 390px; height: 1250px; box-sizing: border-box; background: var(--q-parch); color: var(--q-ink); font-family: var(--font-body); display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 0 8px; min-height: 52px">
+<a href="Create2.dc.html" class="btn btn-icon btn-ghost inked" aria-label="Back" style="width: 44px; height: 44px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<span class="heading" style="font-size: 17px">New character</span>
+<a href="Main.dc.html" class="btn btn-ghost inked" style="min-height: 44px; text-decoration: none">Cancel</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 10px 22px 16px">
+<span class="kicker tnum">Step 3 of 4 · [Archetype B]</span>
+<h1 class="screen-title" style="margin: 0">Talents and gear</h1>
+<div class="bar" style="height: 6px"><div style="width: 75%; background: var(--color-accent-500)"></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 4px 22px 12px">
+<span class="kicker">Core Talent</span>
+<div class="panel" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; min-height: 52px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-800)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+<span class="heading" style="flex: 1; font-size: 17px">[Core Talent name]</span>
+<span class="meta">From archetype</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px 22px 12px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between">
+<span class="kicker">Choose Talents</span>
+<span class="pill tnum">{{picked}} of 2 chosen</span>
+</div>
+<div class="panel" style="overflow: hidden">
+<sc-for list="{{talents}}" as="t" hint-placeholder-count="6">
+<div style="display: flex; align-items: center; border-top: {{t.border}}">
+<button onClick="{{t.toggle}}" aria-pressed="{{t.on}}" style="flex: 1; display: flex; align-items: center; gap: 12px; padding: 0 14px; min-height: 52px; border: 0; background: {{t.bg}}; color: var(--q-ink); text-align: left; cursor: pointer; font-family: var(--font-body); font-size: 15px">
+<span class="checkbox" style="width: 22px; height: 22px; border-color: {{t.boxLine}}; background: {{t.boxFill}}">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="opacity: {{t.tick}}"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+{{t.name}}
+</button>
+<a href="SheetTalent.dc.html" class="btn btn-icon btn-ghost inked" aria-label="About {{t.name}}" style="width: 44px; height: 44px; margin-right: 4px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></a>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px 22px 12px">
+<span class="kicker">Starting gear</span>
+<div class="panel" style="padding: 4px 14px">
+<div style="display: flex; align-items: center; gap: 10px; min-height: 40px"><span class="diamond"></span><span style="flex: 1">[Item]</span><span class="meta">From archetype</span></div>
+<div style="display: flex; align-items: center; gap: 10px; min-height: 40px; border-top: 1px solid var(--q-rule)"><span class="diamond"></span><span style="flex: 1">[Item]</span><span class="meta">From archetype</span></div>
+<div style="display: flex; align-items: center; gap: 10px; min-height: 40px; border-top: 1px solid var(--q-rule)"><span class="diamond"></span><span style="flex: 1">[Item]</span><span class="meta">From archetype</span></div>
+</div>
+<span class="label" style="margin-top: 6px">Choose one</span>
+<div class="seg" role="radiogroup" aria-label="Weapon choice" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
+<label class="seg-opt" style="min-height: 44px; display: flex; align-items: center; justify-content: center"><input type="radio" name="gear" checked="{{gearA}}" onChange="{{pickA}}">[Item option A]</label>
+<label class="seg-opt" style="min-height: 44px; display: flex; align-items: center; justify-content: center"><input type="radio" name="gear" checked="{{gearB}}" onChange="{{pickB}}">[Item option B]</label>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px 22px 12px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between">
+<span class="kicker">Spells and Miracles</span>
+<span class="pill tnum">0 of [n]</span>
+</div>
+<p class="muted" style="margin: 0; font-size: 13px; font-style: italic">Shown only when the archetype grants spells or Miracles.</p>
+<button class="dashed-btn" style="min-height: 48px; font-size: 16px">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+Choose from [Lore]</button>
+</div>
+<div style="flex: 1"></div>
+<div style="display: flex; gap: 10px; padding: 14px 22px 26px; border-top: 1px solid var(--q-rule); background: var(--q-parch)">
+<a href="Create2.dc.html" class="btn btn-secondary" style="flex: 1; min-height: 48px; text-decoration: none; color: var(--q-ink)">Back</a>
+<a href="Create4.dc.html" class="btn btn-primary inked" style="flex: 2; min-height: 48px; text-decoration: none">Next: Details</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1250}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { on: { 1: true }, gear: 'A' }; }
+  renderVals() {
+    const s = this.state;
+    const picked = Object.values(s.on).filter(Boolean).length;
+    const talents = [0, 1, 2, 3, 4, 5].map((i) => {
+      const on = !!s.on[i];
+      return {
+        name: '[Talent name ' + (i + 1) + ']', on,
+        border: i === 0 ? '0' : '1px solid var(--q-rule)',
+        bg: on ? 'var(--q-tint)' : 'transparent',
+        boxFill: on ? 'var(--q-moss)' : 'transparent',
+        boxLine: on ? 'var(--q-moss)' : 'var(--color-accent-800)',
+        tick: on ? 1 : 0,
+        toggle: () => { if (!on && picked >= 2) return; this.setState({ on: { ...s.on, [i]: !on } }); }
+      };
+    });
+    return {
+      talents, picked,
+      gearA: s.gear === 'A', gearB: s.gear === 'B',
+      pickA: () => this.setState({ gear: 'A' }), pickB: () => this.setState({ gear: 'B' })
+    };
+  }
+}
+</script>
+</body>
+</html>
