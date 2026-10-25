@@ -1,6 +1,6 @@
-// Questlog service worker: lets the app open offline.
+// Soulbound Sheet service worker: lets the app open offline.
 // Pages are network-first (so updates arrive), everything else cache-first (built assets are content-hashed).
-const CACHE = 'questlog-v1';
+const CACHE = 'soulbound-v1';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './favicon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {

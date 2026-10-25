@@ -1,0 +1,17 @@
+/* Soulbound Sheet additions on top of the Questlog system (questlog.css). */
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--q-parch); overscroll-behavior: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bare-input::placeholder { color: var(--color-accent-800); opacity: .75; font-style: italic; }
+.bare-input:focus-visible { outline-offset: 4px; }
+button.panel { text-align: inherit; }
+.error-banner { margin: 10px 22px 0; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--q-wax) 45%, transparent); border-radius: var(--radius-md); color: var(--q-wax); font-size: 14px; }
+.desk .app-main { max-width: 1180px; margin: 0 auto; width: 100%; border-inline: 1px solid var(--q-rule); }
+.desk .tabbar { justify-self: stretch; }
+summary { list-style-position: inside; }
+@media (min-width: 768px) {
+  .tabbar { padding-bottom: 12px; }
+}
+/* Cormorant defaults to old-style figures, where 0 reads as "o"; every figure on the sheet is lining and tabular. */
+.tnum, .heading.tnum, .portrait { font-variant-numeric: lining-nums tabular-nums; }
+.skill-xp { white-space: nowrap; }

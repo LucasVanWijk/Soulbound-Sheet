@@ -1,7 +1,7 @@
 {
-  "name": "Questlog",
-  "short_name": "Questlog",
-  "description": "A parchment quest log for everyday life.",
+  "name": "Soulbound Sheet",
+  "short_name": "Soulbound",
+  "description": "A character sheet for Soulbound, kept on your device.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
