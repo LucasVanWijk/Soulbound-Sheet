@@ -1,0 +1,1634 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Sources: Corebook pp. 82–92 (book='Corebook') and Champions of Order pp. 69–82 (book='Champions of Order'). Cost is 2 XP per Talent (11-advancement/advancement-costs.json). Requirements are informational and DM-checked. Effects are the mechanical text, condensed. downtimeNote marks a part the DM runs. Champions Miracles and Lores (Grungni p. 87, Teclis p. 91, High Peaks p. 103) are not included.",
+  "defaultCost": 2,
+  "talents": [
+    {
+      "name": "A Warm Meal",
+      "page": 82,
+      "requirement": "Cooking utensils, ingredients (equipment)",
+      "repeatable": false,
+      "effect": "When you take a Rest, you may spend it cooking a meal for you and your companions. At the end of the Rest, the Binding recovers 1 Soulfire.",
+      "downtimeNote": "Rest is an in-session action; the Binding gains the Soulfire.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Acute Sense",
+      "page": 82,
+      "requirement": "Training (1) in Awareness",
+      "repeatable": false,
+      "effect": "Choose one sense (sight, sound, touch, taste, smell). Dice gained from Training on Awareness Tests with that sense are doubled. The GM may allow Awareness Tests others cannot make.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Aether-Khemists Guild Member",
+      "page": 83,
+      "requirement": "Duardin (Kharadron Overlords), Training (1) and Focus (1) in Crafting",
+      "repeatable": false,
+      "effect": "You may take the Aethercraft Endeavour to create aetheric devices (p. 156).",
+      "downtimeNote": "Endeavour, run by the DM.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Alley Cat",
+      "page": 83,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to hide in a city or to search for someone. You always know which streets to take in a city and can never become lost in one.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Ambidextrous",
+      "page": 83,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When dual wielding and making an Attack, add 1d6 to your dice pool before splitting the dice for each weapon.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Ancestral Memories",
+      "page": 83,
+      "requirement": "Kurnoth Hunter (Archetype)",
+      "repeatable": false,
+      "effect": "When you complete a Rest, gain Training (1) or Focus (1) in one Skill of your choice, or increase your Training or Focus in a Skill you have by 1, to a maximum of 3. This benefit lasts until you finish a Rest, when you may choose a new Skill or keep the same one.",
+      "downtimeNote": null,
+      "book": "Corebook"
+    },
+    {
+      "name": "Animal Friend",
+      "page": 83,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to get an animal to follow your commands or earn its trust. You know what an animal wants or what might be stressing or harming it.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Arcane Discipline",
+      "page": 83,
+      "requirement": "Focus (1) in Channelling",
+      "repeatable": false,
+      "effect": "When your spell targets a Zone, you may choose a number of targets equal to your Focus in Channelling to be unaffected by it.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Backstab",
+      "page": 83,
+      "requirement": "Training (1) or Focus (1) in Stealth; a Subtle weapon",
+      "repeatable": false,
+      "effect": "If you Attack with a Subtle weapon and the target is unaware of you, the attack deals double Damage and ignores Armour.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Barazakdum, the Doom-oath",
+      "page": 83,
+      "requirement": "Doomseeker (Archetype)",
+      "repeatable": false,
+      "effect": "Whenever your Toughness is at 0, Damage from your attacks is doubled. This is applied before subtracting the target's Armour.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Battle Rage",
+      "page": 83,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "As a Free Action, reduce your Defence a number of steps to increase your Melee by the same number of steps. Battle Rage and the changes to Defence and Melee last until the start of your next turn.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Blessed (Choose)",
+      "page": 83,
+      "requirement": "Training (1) and Focus (1) in Devotion",
+      "repeatable": false,
+      "effect": "Choose the god who has shown you favour and choose 1 Miracle (see 08-miracles/). Further Miracles cost 2 XP each.",
+      "choice": "god",
+      "book": "Corebook"
+    },
+    {
+      "name": "Blood Frenzy",
+      "page": 83,
+      "requirement": "Witch Aelf",
+      "repeatable": false,
+      "effect": "On your turn, if you make a melee Attack and deal Damage, your Melee increases one step for your next Attack. It keeps increasing with each subsequent Attack that deals Damage. Melee returns to normal at the end of your turn. No effect against Undead or creatures that do not bleed.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Bulwark",
+      "page": 84,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "If two or more enemies are within Close Range of you at the start of your turn, your Defence increases one step until the start of your next turn.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Combat Ready",
+      "page": 84,
+      "requirement": null,
+      "repeatable": true,
+      "effect": "You gain a +2 bonus to Initiative and can never be Surprised in combat. Each time you take this Talent, the Initiative bonus increases by another +2.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Combat Repairs",
+      "page": 84,
+      "requirement": "Training (1) in Crafting, smith's tools or endrineer's tools",
+      "repeatable": false,
+      "effect": "Attempt to repair an ally's Armour in combat. DN depends on rarity and familiarity: DN 4:1 if familiar with the material or the armour is Common; DN 5:1 if unfamiliar or the armour is Rare; DN 6:1 if unfamiliar and the material is unique or magical (e.g. Sigmarite, Sylvaneth natural armour). Each success restores 1 Armour, up to the armour's original rating. Repairs last until the end of combat.",
+      "tools": [
+        "smith's tools",
+        "endrineer's tools"
+      ],
+      "book": "Corebook"
+    },
+    {
+      "name": "Contortionist",
+      "page": 84,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to escape someone's grasp or slip away, such as when grappled. You can fit into unusually small or cramped locations.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Criminal",
+      "page": 84,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to steal from someone or to go unnoticed during illicit activities. You can easily find havens of criminal activity such as illegal fight clubs or black market dealers.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Crushing Blow",
+      "page": 84,
+      "requirement": "Body (3); a Crushing weapon",
+      "repeatable": false,
+      "effect": "A natural 6 on an Attack with a Crushing weapon against a Large or smaller creature Stuns the target until the end of their next turn.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Demolitions Expert",
+      "page": 84,
+      "requirement": "Focus (1) in Crafting",
+      "repeatable": false,
+      "effect": "When you use an explosive or weapon with the Blast Trait, you may choose a number of targets equal to your Focus in Crafting to be unaffected by the blast.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Diplomat",
+      "page": 84,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to resolve a conflict, gauge people's moods and intentions, and tell if people are lying. Most people act courteously towards you.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Eidetic Memory",
+      "page": 84,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You recall major elements of a memory with near perfect detail. Minutiae may need a Test; the Skill and DN are set by the GM.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Endrineers Guild Member",
+      "page": 84,
+      "requirement": "Duardin (Kharadron Overlords), Training (1) and Focus (1) in Crafting",
+      "repeatable": false,
+      "effect": "You may take the Endrineering Endeavour to forge aetheric devices (p. 156).",
+      "downtimeNote": "Endeavour, run by the DM.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Fearless",
+      "page": 85,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Whenever you would become Frightened due to failing a Test, or are magically influenced to act against your will, you may make a DN 6:1 Mind (Determination) Test to resist.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Forbidden Knowledge",
+      "page": 85,
+      "requirement": null,
+      "repeatable": true,
+      "effect": "Choose a Skill from Arcana, Lore or Theology. When you make a Test with that Skill, the dice gained from your Training are doubled. If you fail the Test, Doom increases by 1 and the GM may introduce future plots caused by it. Each time you take this Talent, choose a new Skill.",
+      "choice": "skill: Arcana, Lore, Theology",
+      "book": "Corebook"
+    },
+    {
+      "name": "Graceful Landing",
+      "page": 85,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you fall from a height, you may make a Body (Athletics) Test to avoid Damage. Difficulty is 1 per 10 feet fallen, to a maximum of 6. On success, reduce the Damage by the number of successes.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Gunslinger",
+      "page": 85,
+      "requirement": "Training (1) and Focus (1) in Ballistic Skill",
+      "repeatable": false,
+      "effect": "While wielding a ranged weapon in each hand, your Accuracy increases one step.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Guts",
+      "page": 85,
+      "requirement": "Training (1) in Fortitude",
+      "repeatable": false,
+      "effect": "Gain +1 Toughness for each level of Training in Fortitude.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Hail of Doom",
+      "page": 85,
+      "requirement": "Training (1) or Focus (1) in Ballistic Skill; a ranged weapon",
+      "repeatable": false,
+      "effect": "Choose a Zone within your weapon's range and make a DN 4:1 Body (Ballistic Skill) Test. Each enemy in that Zone makes an Opposed DN 4:1 Body (Reflexes) Test. On failure, the target suffers Damage equal to the difference in successes. A target that wins takes no Damage.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Hard to Kill",
+      "page": 85,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "The first Death Test you fail in combat does not increase the DN. The next Test you fail increases the DN as normal.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Heavy Hitter",
+      "page": 85,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Unarmed strikes deal 1 + S Damage (as printed; 'S' is not defined in this knowledge base, so check the Damage rules before implementing), have the Crushing Trait, and lose the Ineffective Trait.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Heroic Challenge",
+      "page": 86,
+      "requirement": "Knight-Questor (Archetype)",
+      "repeatable": false,
+      "effect": "As an Action, choose a creature within Medium Range. If it attacks any target other than you, its Melee and Accuracy decrease one step. If it is a spellcaster, the Complexity of offensive spells that do not target you or your Zone increases by 1. Your Melee increases one step when attacking the target. Lasts until the end of combat.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Hit and Run",
+      "page": 86,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Once per turn, if you deal Damage with a melee Attack, you may move to an adjacent Zone as a Free Action.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Hunter",
+      "page": 86,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to track, find, trap or hunt creatures. Choose one terrain type: Desert, Forest, Grassland, Mountain, Tainted Lands (touched by Chaos or Death), or Tundra. In that terrain you can find a relatively secure place to rest, and cannot be Surprised while resting there.",
+      "choice": "terrain",
+      "book": "Corebook"
+    },
+    {
+      "name": "Immense Strikes",
+      "page": 86,
+      "requirement": "Body (4); a Two-handed melee weapon",
+      "repeatable": false,
+      "effect": "Deal +1 Damage with melee weapons that have the Two-handed Trait.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Immense Swing",
+      "page": 86,
+      "requirement": "Body (4); a Two-handed melee weapon",
+      "repeatable": false,
+      "effect": "Two-handed melee weapons you wield gain the Cleave Trait.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Intimidating Manner",
+      "page": 86,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to threaten, intimidate and start arguments. People often leave you alone even when you are somewhere you do not belong.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Iron Stomach",
+      "page": 86,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Double the dice gained from Training in Fortitude for Tests to resist poison and disease.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Iron Will",
+      "page": 86,
+      "requirement": "Training (1) in Determination",
+      "repeatable": false,
+      "effect": "Gain +1 Toughness for each level of Training in Determination.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Legendary Saga",
+      "page": 86,
+      "requirement": "Duardin (Fyreslayer); Training (1) in Entertain",
+      "repeatable": false,
+      "effect": "As an Action, make a Soul (Entertain) Test to chant one saga. Effect lasts until the start of your next turn. Saga of Condemnation (DN 6:1): the Complexity of any spell cast by an enemy with Long Range increases by 1. Saga of Enmity (DN 5:1): any ally that starts its turn in your Zone and can hear you increases Melee and Accuracy one step until the start of its next turn. Saga of Grimnir (DN 6:1): any ally that starts its turn in your Zone and can hear you deals additional Damage on melee Attacks equal to your successes on this Entertain Test.",
+      "choice": "saga: Condemnation, Enmity, Grimnir",
+      "book": "Corebook"
+    },
+    {
+      "name": "Loyal Companion (Choose)",
+      "page": 86,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "A familiar or pet that serves as your companion. It gains Toughness equal to your Soul. On your turn you may use an Action to direct it to Move and take an Action. Companions have no Initiative of their own. Companion statistics are in the Bestiary.",
+      "choice": "companion",
+      "companions": [
+        "Bittergrub (Sylvaneth)",
+        "Drillbill (Kharadron)",
+        "Efreet",
+        "Fangmora Eel (Idoneth Deepkin)",
+        "Gryph-hound (Free Peoples or Stormcast Eternals)",
+        "Horse",
+        "Mustori",
+        "Quiverling (Sylvaneth)",
+        "Scryfish (Idoneth Deepkin)",
+        "Spirit Guardian",
+        "Star-eagle (Stormcast Eternal)",
+        "Rakerdart (Idoneth Deepkin only; Champions p. 75)",
+        "Scryhawk (requires Scryhawk Lantern, Champions p. 109)"
+      ],
+      "downtimeNote": "Train Companion Endeavour replaces a dead companion; DM-run.",
+      "book": "Corebook",
+      "notes": "Champions p. 75 adds Rakerdart and Scryhawk to the companion options."
+    },
+    {
+      "name": "Martial Memories",
+      "page": 87,
+      "requirement": "Tree-Revenant (Archetype)",
+      "repeatable": false,
+      "effect": "At the start of combat, choose one: Memories of War (Melee increases one step for the combat); Memories of Defiance (Defence increases one step for the combat); Memories of Dawn (you act first every round for the combat, even ahead of other abilities that would allow an earlier action).",
+      "choice": "memory: War, Defiance, Dawn",
+      "book": "Corebook"
+    },
+    {
+      "name": "Master of Disguise",
+      "page": 87,
+      "requirement": "Disguise Kit",
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to disguise yourself or appear to be someone else. When you take this Talent, create an alternate persona (name, appearance, acquaintances).",
+      "downtimeNote": "False Identity Endeavour builds the persona; DM-run.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Medic",
+      "page": 87,
+      "requirement": "Training (1) and Focus (1) in Medicine; suitable tools and supplies",
+      "repeatable": false,
+      "effect": "Instead of taking a Rest, you may spend it treating one Wound of one ally (say which Wound). Make a Mind (Medicine) Test: DN 4:2 for a Severe Wound, DN 4:3 for a Deadly Wound. On success, the Wound severity reduces two steps at the end of the Rest (Severe is healed; Deadly becomes Minor). On failure, the Wound does not heal. Either way, the ally does not gain the benefits of the Rest.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Mounted Combatant",
+      "page": 88,
+      "requirement": "Training (1) or Focus (1) in Beast Handling",
+      "repeatable": false,
+      "effect": "When mounted, your Melee increases one step.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Night Vision",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You do not suffer Disadvantage on sight Tests in low light or darkness.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Observant",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to spot hidden enemies. Natural Awareness increases by 1. You do not suffer a Defence penalty when attacked by a hidden creature.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Opportunist",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Once per round, you may immediately make an Attack when an opponent attempts to move away from you.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Orientation",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You always know which way is coreward (towards the centre of the realm) and which is edgeward. You can never become lost, except through powerful magic or divine intervention.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Patient Strike",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Delay your turn to act last in Initiative; your Melee and Accuracy increase one step. When your turn comes, you may Move, take Actions and spend Mettle as normal. At the start of the next round you return to your original place in Initiative.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Pierce Armour",
+      "page": 88,
+      "requirement": "Training (1) in Awareness; a Piercing weapon",
+      "repeatable": false,
+      "effect": "Ignore 1 point of Armour for every 6 rolled on an Attack with a Piercing weapon.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Point Blank Range",
+      "page": 88,
+      "requirement": "Training (1) and Focus (1) in Ballistic Skill",
+      "repeatable": false,
+      "effect": "No penalty to Accuracy when using a ranged weapon at Close Range.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Potent Spells",
+      "page": 88,
+      "requirement": "Training (1) and Focus (1) in Channelling",
+      "repeatable": false,
+      "effect": "When a creature must make a Test to resist one of your spells, the number of successes required increases by 1.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Quick Reload",
+      "page": 88,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Ignore the Reload Trait on any weapon you use.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Relentless Assault",
+      "page": 88,
+      "requirement": "Training (1) and Focus (1) in Weapon Skill",
+      "repeatable": false,
+      "effect": "While wielding a melee weapon in each hand, your Melee increases one step.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Rending Blow",
+      "page": 89,
+      "requirement": "Body (3); Focus (1) in Might; a melee weapon",
+      "repeatable": false,
+      "effect": "When you make a melee Attack, you may sunder the target's Armour instead of dealing Damage. Armour is reduced by your successes on the Attack, to a maximum of 1 plus your Focus in Might. The Armour is permanently damaged and must be repaired.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Savvy",
+      "page": 89,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests when bargaining with merchants or brokering contracts. If you fail a bribe, the target is less likely to take it badly or report you.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Scholar",
+      "page": 89,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Choose the focus of your study (e.g. history, biology, the realms). Double the dice gained from Training in Lore for Tests on the chosen subject.",
+      "choice": "subject",
+      "book": "Corebook"
+    },
+    {
+      "name": "Sense Ur-Gold",
+      "page": 89,
+      "requirement": "Duardin (Fyreslayer)",
+      "repeatable": false,
+      "effect": "Make a DN 4:1 Soul (Awareness) Test to detect ur-gold nearby. Failure, or no ur-gold within 1,000 feet, means you sense nothing. Success within 1,000 feet gives the general direction. Within Medium Range you know its location to within a few feet. Within Short Range you know its exact location.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Sever",
+      "page": 89,
+      "requirement": "Training (1) in Medicine; a Slashing weapon",
+      "repeatable": false,
+      "effect": "A natural 6 on an Attack with a Slashing weapon knocks the target Prone. For the rest of the combat, any time it Moves it suffers 1 Damage that ignores Armour.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Shield Mastery",
+      "page": 89,
+      "requirement": "Training (1) and Focus (1) in Weapon Skill; Training (3) and Focus (3) in Reflexes",
+      "repeatable": false,
+      "effect": "When wielding a shield, your Defence increases by one additional step.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Sigmar's Judgement",
+      "page": 89,
+      "requirement": "Training (1) and Focus (1) in Theology",
+      "repeatable": false,
+      "effect": "Your Melee and Accuracy increase one step when the target of your Attack is a Daemon or servant of Chaos.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Silver Tongue",
+      "page": 89,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to persuade, deceive or seduce others. People remember you fondly and greet you warmly when you return.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Sleight of Hand",
+      "page": 89,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to distract, misdirect, steal or hide small objects. Even if thoroughly searched and disarmed, you can hide a palm-sized object on your person.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Spellcasting (Choose)",
+      "page": 89,
+      "requirement": "Training (1) and Focus (1) in Channelling",
+      "effect": "When you gain this Talent, choose one of the Lores of Magic. You learn the spells Arcane Bolt and Mystic Shield, and can choose 4 more spells from the Common Spell list and your Lore's spell list. For more information on Spellcasting, see Chapter 11: Magic. For information on learning new spells, see page 158.",
+      "choice": "lore: Amber, Amethyst, Bright, Celestial, Gold, Grey, Jade, Light, The Deeps, High Peaks",
+      "lores": [
+        "Amber",
+        "Amethyst",
+        "Bright",
+        "Celestial",
+        "Gold",
+        "Grey",
+        "Jade",
+        "Light",
+        "The Deeps",
+        "High Peaks"
+      ],
+      "book": "Corebook",
+      "repeatable": true
+    },
+    {
+      "name": "Star-fated Arrow",
+      "page": 91,
+      "requirement": "Knight-Venator (Archetype)",
+      "repeatable": false,
+      "effect": "As an Action, choose a creature you can see within Long Range. The next ranged Attack you make against it ignores Armour.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Strong Soul",
+      "page": 91,
+      "requirement": "Blessed (any); Training (2) in Devotion",
+      "repeatable": false,
+      "effect": "To calculate Mettle, add your Soul and your level of Training in Devotion, and divide the result by two.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Tactician",
+      "page": 91,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "As an Action, choose an ally within Medium Range. The ally may make an Attack against a creature of your choice if able and has a suitable weapon prepared. If it attacks, it adds bonus dice equal to your Mind. A creature can benefit from this Talent once per round.",
+      "book": "Corebook"
+    },
+    {
+      "name": "The Bigger They Are",
+      "page": 91,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Your Melee is considered one step higher when fighting beasts or creatures of Large size or greater.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Trader's Cache",
+      "page": 91,
+      "requirement": "Trade Pioneer (Archetype)",
+      "repeatable": false,
+      "effect": "Make a DN 4:1 Mind (Survival) Test and note the successes. These are your Trader's Cache. After any Test, you may expend successes from the cache to add an equal number of successes to the result. When bargaining or trading you may spend successes to say you have the item the other party wants (GM may require 2 for a Rare item, 3 or more for an Exotic item). The maximum is your Mind plus Training in Survival.",
+      "downtimeNote": "Replenish the cache by Resting in a city or between adventures; the between-adventures part is DM-run.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Unbind",
+      "page": 91,
+      "requirement": "Training (1) and Focus (1) in Channelling",
+      "repeatable": false,
+      "effect": "When a creature you can see within Long Range casts a spell, spend 1 Mettle to attempt to unbind it. Make a Mind (Channelling) Test. The Difficulty is the spell's Difficulty, and the Complexity is the total successes the caster achieved. On success the spell has no effect. On failure the spell takes effect as normal.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Unbreakable Spells",
+      "page": 92,
+      "requirement": "Spellcasting (any); Focus (1) in Channelling",
+      "repeatable": false,
+      "effect": "If a creature attempts to unbind or disrupt your spells, the Complexity of its Test increases by 1 per level of Focus you have in Channelling.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Underdog",
+      "page": 92,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "If two or more enemies and no allies are within Close Range of you at the start of your turn, your Melee increases one step until the start of your next turn.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Vanish",
+      "page": 92,
+      "requirement": "Focus (1) in Stealth",
+      "repeatable": false,
+      "effect": "You can attempt to hide even when there is no cover or shadows.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Weapon Weave",
+      "page": 92,
+      "requirement": "Branchwych (Archetype)",
+      "repeatable": false,
+      "effect": "When you take a Rest, make a Soul (Crafting) Test to create a facsimile weapon from roots, vines and fauna. DN 4:1 for any Common Subtle melee weapon or a holy symbol of Alarielle; DN 5:1 for any Common one-handed weapon or a Shield; DN 6:1 for any Common two-handed weapon or a Bow.",
+      "downtimeNote": "Magical Weapon Weave Endeavour adds magical energy; DM-run.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Witch-Sight",
+      "page": 92,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You can see the magical energy that permeates the realms. At the GM's discretion you can track and follow the flow of magic.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Zharrgrim",
+      "page": 92,
+      "requirement": "Duardin (Fyreslayer); Blessed (Grimnir); Sense Ur-Gold",
+      "repeatable": false,
+      "effect": "You can take the Forge Ur-Gold Rune Endeavour (p. 157).",
+      "downtimeNote": "Endeavour, run by the DM.",
+      "book": "Corebook"
+    },
+    {
+      "name": "Aether-Efficiency",
+      "book": "Champions of Order",
+      "page": 69,
+      "requirement": "Duardin (Kharadron Overlords); Training (2) and Focus (2) in Crafting; an Aether-rig",
+      "repeatable": false,
+      "effect": "The overall Power Capacity of your Aether-rig increases by 1."
+    },
+    {
+      "name": "Aetheric Agitator",
+      "book": "Champions of Order",
+      "page": 69,
+      "requirement": "Kharadron Overlord; Training (2) or Focus (2) in Crafting",
+      "repeatable": false,
+      "effect": "When using equipment with the Aetheric Trait, you may double the listed value of any Blast Trait. However, if you suffer a Serious or Deadly Wound, roll 1d6. On a result of 1, one of the unstable explosives is damaged and detonates on your person, dealing 4 Damage to all creatures in your Zone."
+    },
+    {
+      "name": "Aethermatics Over Superstition",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Duardin (Kharadron Overlords); cannot have Training or Focus in Devotion or Channelling",
+      "repeatable": false,
+      "effect": "If you fail an Opposed Test against a Miracle or spell, you can spend a Mettle to reroll the Test. You may reroll a Test only once, and you must take the result of the reroll."
+    },
+    {
+      "name": "Aerial Evasion",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Fly Speed; Training (1) and Focus (1) in Reflexes",
+      "repeatable": false,
+      "effect": "While you are Flying, your Defence increases one step against all attacks made from outside your Zone."
+    },
+    {
+      "name": "Affinity with Intricacies",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Focus (1) in Crafting and Dexterity",
+      "repeatable": false,
+      "effect": "When you make a Test to interact with the delicate internals of intricate machinery, double the bonus gained from any Focus in the Skill being tested."
+    },
+    {
+      "name": "A Good Plan",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Mind (5)",
+      "repeatable": false,
+      "effect": "During a Rest, spend at least an hour planning with your allies. Each participant, including you, makes a DN 4:1 Mind Test, and the successes go into one pool of points. When a party member makes a Test during the planned encounter, they may spend one point to reroll a die or increase its result by 1 before the result is determined. They cannot use more than one die per Test. If the planned encounter does not occur within the next day, the pool is lost."
+    },
+    {
+      "name": "Ancestral Grudge",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Duardin",
+      "repeatable": false,
+      "effect": "When making an Opposed Test for the first time against a creature you recognise, roll 1d6. On a 6, you recall that this creature or one of its kind wronged you or your ancestors. You have Advantage on Opposed Tests against that creature until you deem the grudge settled."
+    },
+    {
+      "name": "Applied Anatomy",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Training (1) and Focus (1) in Medicine",
+      "repeatable": false,
+      "effect": "When you successfully hit a living creature with an attack, add 1 Damage for each 6 rolled on the Attack. This extra Damage cannot exceed your higher level of Training or Focus in Medicine."
+    },
+    {
+      "name": "Arcane Denial",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Focus (1) in Arcana",
+      "repeatable": false,
+      "effect": "If a spell targets you or your Zone and you are aware of it, add your level of Focus in Arcana to any Tests to resist its effects."
+    },
+    {
+      "name": "Armour Expert",
+      "book": "Champions of Order",
+      "page": 70,
+      "requirement": "Body (3); Focus (2) in Reflexes",
+      "repeatable": false,
+      "effect": "You ignore the Penetrating Trait for attacks made against you. Damage to your armour dealt by the Rend Trait is reduced by 1."
+    },
+    {
+      "name": "Attuned to Nature",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Sylvaneth; Soul (3); Training (1) and Focus (1) in Nature",
+      "repeatable": false,
+      "effect": "When you take a Rest in direct contact with the ground or a body of water, clear 2 spaces on your Wound Track instead of 1. If you seek this relief from Chaos-tainted land, make a DN 4:X Soul (Fortitude) Test, where X is the current Doom. On failure, you receive no benefit from the Rest and suffer a Minor Wound."
+    },
+    {
+      "name": "Backup Plan",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Mind (3)",
+      "repeatable": false,
+      "effect": "If you fail a Test and one of the dice rolled was a 1, you may reroll the Test, but its Complexity increases by 1. You cannot reroll a Test more than once this way, and you must Take a Breather or complete a Rest before using this Talent again."
+    },
+    {
+      "name": "Blood of Martyrs",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Blessed (Sigmar); Training (2) and Focus (2) in Devotion",
+      "repeatable": false,
+      "effect": "When a Daemon within Close Range damages you with an attack, it suffers 2 Damage for each level of Training you have in Devotion."
+    },
+    {
+      "name": "Blood Sacrifice",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Blessed (any) or Spellcasting (any)",
+      "repeatable": false,
+      "effect": "When a sapient creature in your Zone dies a violent death, you may spend a Mettle to cast a spell or use a Miracle (paying any Mettle cost of the Miracle as well). If you do, add dice equal to the number of creatures that have died this round to any Channelling or Devotion Tests made as part of this Talent. A Swarm counts as one creature. If non-combatants witness this, the GM may increase Doom by 1. Using unwilling non-combatants' blood, or allowing bystanders to die for it, increases Doom by 1."
+    },
+    {
+      "name": "Born from Agony",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Aelf (Idoneth Deepkin); Training (1) or Focus (1) in Determination; Training (1) or Focus (1) in Fortitude",
+      "repeatable": false,
+      "effect": "When you make a Test to resist fear or pain using Determination or Fortitude, you may double your Training and Focus in the Skill being tested."
+    },
+    {
+      "name": "Careful Casting",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Spellcasting (any); Focus (2) in Channelling",
+      "repeatable": false,
+      "effect": "Roll one less die on the Price of Failure table (Soulbound p. 266), to a minimum of 1d6."
+    },
+    {
+      "name": "Caregiver",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you make a Test to restore Toughness or remove Wounds or Conditions from a creature other than yourself, double the dice gained from your Training in that Skill. This includes magical effects such as spells and Miracles."
+    },
+    {
+      "name": "Collected",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Training (1) and Focus (1) in Determination",
+      "repeatable": false,
+      "effect": "Whenever you would become Stunned due to failing a Test, or are magically stricken with confusion, you may immediately make a DN 6:1 Mind (Determination) Test to resist the effect."
+    },
+    {
+      "name": "Combat Sense",
+      "book": "Champions of Order",
+      "page": 71,
+      "requirement": "Focus (1) in Awareness and Intuition",
+      "repeatable": false,
+      "effect": "You suffer no penalty to Melee, Accuracy or Defence when Blinded or attacked by a hidden creature."
+    },
+    {
+      "name": "Compelling Music",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Soul (3); Training (1) and Focus (1) in Entertain",
+      "repeatable": false,
+      "effect": "If you spend at least a minute performing a song, choose one option and make a DN 6:1 Soul (Entertain) Test. On success it affects creatures that willingly listen. A Captivating Song: listeners are Charmed for 10 minutes per success. A Song of Remembrance: each listener gains Advantage on one Opposed Test within the next number of hours equal to your successes. A Triumphant Song: if performed for your Binding during a Rest, the Binding regains 1 Soulfire. Usable once per Rest. The Binding cannot benefit from this and from A Warm Meal in the same Rest.",
+      "choice": "song: Captivating, Remembrance, Triumphant"
+    },
+    {
+      "name": "Concussive Shield",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Spellcasting (any)",
+      "repeatable": false,
+      "effect": "If an enemy deals Damage to a creature affected by your Mystic Shield (including yourself), make a DN 4:1 Mind (Channelling) Test opposed by the attacker's Body (Might or Reflexes). If the attacker fails, it is Stunned until the end of its next turn."
+    },
+    {
+      "name": "Conditioned to Fight",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Body (3); Focus (2) in Reflexes",
+      "repeatable": false,
+      "effect": "When determining Initiative, you may use Body instead of Mind."
+    },
+    {
+      "name": "Close-Quarters Specialist",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Training (1) and Focus (2) in Weapon Skill",
+      "repeatable": false,
+      "effect": "When making an unarmed attack, or attacking at Close Range with a Subtle melee weapon, your Melee increases one step."
+    },
+    {
+      "name": "Counterattack",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Focus (2) in Reflexes and Weapon Skill",
+      "repeatable": false,
+      "effect": "Once per turn, when an enemy hits you with a melee Attack, you may use a Free Action to Attack that enemy if it is within range."
+    },
+    {
+      "name": "Crack Shot",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Training (2) and Focus (2) in Ballistic Skill",
+      "repeatable": false,
+      "effect": "You deal +1 Damage when you take the Called Shot Action."
+    },
+    {
+      "name": "Creator",
+      "book": "Champions of Order",
+      "page": 72,
+      "requirement": "Training (1) and Focus (1) in Crafting",
+      "repeatable": false,
+      "effect": "The Complexity of Tests to build new items (not repairing or modifying) is reduced by 1."
+    },
+    {
+      "name": "Decisive Action",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Training (2) and Focus (2) in Reflexes",
+      "repeatable": false,
+      "effect": "When you attack a target lower in the Initiative order than you, your Melee and Accuracy increase one step."
+    },
+    {
+      "name": "Devastating Bolts",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Spellcasting (any); Training (2) or Focus (2) in Channelling",
+      "repeatable": false,
+      "effect": "When you cast Arcane Bolt, each 6 rolled on your Channelling Test grants +1 Damage, up to your highest level of Training or Focus in Channelling."
+    },
+    {
+      "name": "Dig Deep",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Soul (3); Training (1) and Focus (1) in Determination",
+      "repeatable": false,
+      "effect": "When both your Mettle and Toughness are at 0, use a Free Action to regain 1 Mettle. Usable once per round."
+    },
+    {
+      "name": "Dirty Fighting",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Training (1) in Guile; Training (1) in Weapon Skill",
+      "repeatable": false,
+      "effect": "When you hit an enemy with an unarmed attack, you may choose to deal no Damage. If you do, the target makes a DN 4:S Body (Fortitude) Test, where S is your successes. On failure it is Blinded or Stunned (your choice) until the start of your next turn."
+    },
+    {
+      "name": "Dispel",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Unbind; Training (2) and Focus (2) in Channelling",
+      "repeatable": false,
+      "effect": "As an Action, attempt to dispel a spell that has already taken effect with a Mind (Channelling) Test. The DN is the spell's DN, but the Complexity is one higher. On success the spell is unbound and dispelled. On failure it remains in effect. Each further attempt on the same spell increases the Complexity by one more."
+    },
+    {
+      "name": "Display of Valour",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Soul (3); Training (2) in Entertain",
+      "repeatable": false,
+      "effect": "When you kill a non-Minion enemy, allies within Medium Range who witness it lose the Frightened Condition and regain 1 Mettle. Once per combat."
+    },
+    {
+      "name": "Duelist",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Training (2) and Focus (2) in Weapon Skill",
+      "repeatable": false,
+      "effect": "If only one enemy and no allies are within Close Range of you, your Melee and Defence increase one step against that enemy until the start of your next turn."
+    },
+    {
+      "name": "Effortless Deceit",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to deceive others, such as lying, forging documents or disguising yourself. You are unaffected by spells and effects that compel you to tell the truth."
+    },
+    {
+      "name": "Emotional Transference",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Scinari Cathallar",
+      "repeatable": false,
+      "effect": "When casting a spell or using a Miracle, you may suffer a Minor Wound. If you do, add 1d6 per Doom to your dice pool for that spell or Miracle."
+    },
+    {
+      "name": "Empathic",
+      "book": "Champions of Order",
+      "page": 73,
+      "requirement": "Training (1) and Focus (1) in Intuition",
+      "repeatable": false,
+      "effect": "When interacting socially with an intelligent creature, and gauging its feelings would help a Test, add 1d6 per level of Training in Intuition. When making an Intuition Test to identify someone's mood, double the benefit of your Training in Intuition."
+    },
+    {
+      "name": "Evasive",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Training (1) in Athletics and Reflexes",
+      "repeatable": false,
+      "effect": "After using your Move to leave your Zone and enter another, your Defence increases one step until the start of your next turn. It increases two steps instead when you take the Dodge Action."
+    },
+    {
+      "name": "Executioner",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you hit an Incapacitated, Prone or Restrained creature with an Attack, deal 1 additional Damage for each 6 rolled."
+    },
+    {
+      "name": "Expert Coordinator",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "All members of your party add 1 to their Initiative while they can see or hear you."
+    },
+    {
+      "name": "Exploding Bolts",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Spellcasting (any); Training (2) or Focus (2) in Channelling",
+      "repeatable": false,
+      "effect": "When you cast Arcane Bolt, any creature within Close Range of the target takes half Damage. A creature with a higher Defence than the target may make a DN 4:1 Body (Reflexes) Test opposed by your Channelling roll to avoid the Damage."
+    },
+    {
+      "name": "Fanatical Faith",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Training (2) and Focus (2) in Devotion",
+      "repeatable": false,
+      "effect": "When you suffer a Wound, make a DN 6:1 Soul (Devotion) Test. On success, the Wound's severity is reduced one step, to a minimum of Minor."
+    },
+    {
+      "name": "Focus on Faith",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Focus (2) in Devotion",
+      "repeatable": false,
+      "effect": "When you make a Soul (Determination or Fortitude) Test, you may add the benefit of your Focus in Devotion."
+    },
+    {
+      "name": "Gargant's Grip",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Body (5); Training (3) in Might",
+      "repeatable": false,
+      "effect": "You can wield equipment with the Two-handed Trait in one hand."
+    },
+    {
+      "name": "Helpful",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you take the Help Action, the recipient adds one additional die to their pool."
+    },
+    {
+      "name": "Hurler",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Body (2); Training (1) or Focus (1) in Athletics",
+      "repeatable": false,
+      "effect": "When you throw an item or weapon, its Range increases one step."
+    },
+    {
+      "name": "Industrious",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Human",
+      "repeatable": false,
+      "effect": "During a period of downtime when you undertake one or more Endeavours, you may take one additional Endeavour.",
+      "downtimeNote": "Endeavour count, DM-run."
+    },
+    {
+      "name": "Insightful Interrogator",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": "Focus (1) in Intimidation and Intuition",
+      "repeatable": false,
+      "effect": "When making an Intimidation Test to coerce an intelligent creature, use Mind instead of Body or Soul, and you may add your Training and Focus in Intuition to the Test."
+    },
+    {
+      "name": "In the Right Hands",
+      "book": "Champions of Order",
+      "page": 74,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "A tool or object solid enough to survive combat (such as a barstool, Endrineer's Tools, Smith's Tools or certain Surgical Instruments) loses the Ineffective Trait when you use it as an Improvised Weapon."
+    },
+    {
+      "name": "Introspective",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Whenever you would become Charmed due to failing a Test or a magical effect, you may immediately make a DN 6:1 Mind (Determination or Intuition) Test to resist the effect."
+    },
+    {
+      "name": "Iron Grip",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": "Training (1) in Might",
+      "repeatable": false,
+      "effect": "Double the bonus gained from Training in Might on Tests involving the strength of your grip (Grapple, keeping an item from an enemy, holding a ledge). You can ignore effects that would make you drop items you are holding."
+    },
+    {
+      "name": "Iron Lung",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": "Body (2)",
+      "repeatable": false,
+      "effect": "You can hold your breath and survive a lack of air for twice as long."
+    },
+    {
+      "name": "Lead from the Front",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "While you are within Close Range of an enemy that has damaged you since your last turn, allies in your Zone increase their Melee and Accuracy one step."
+    },
+    {
+      "name": "Lead the Way",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "During your turn, allies that can see you may spend a Mettle to move up to one Zone closer to you. Each ally may do so once per round."
+    },
+    {
+      "name": "Lightning-fast Strikes",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": "Knight-Zephyros (Archetype)",
+      "repeatable": false,
+      "effect": "When you take the Charge Action, you may attack twice instead of once, making the second attack as a Free Action. You gain the benefit of Charge on both attacks, but your Melee decreases one step for each attack."
+    },
+    {
+      "name": "Lunge",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "As long as you are not Restrained or Prone, melee weapons you wield gain the Reach Trait if they do not already have it."
+    },
+    {
+      "name": "Lurelight",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": "Isharann Soulrender (Archetype)",
+      "repeatable": false,
+      "effect": "A lurelight holds a single strong soul or five weak souls. When a creature dies in your Zone, its soul is drawn to the lurelight. Strong soul (from a Champion or Chosen enemy): as an Action, restore 1 Soulfire, or allow a member of the Binding within Long Range to recover one Wound space. Weak soul (from a Minion, Warrior or Swarm creature): as an Action, allow a member of the Binding within Long Range to recover Toughness equal to the souls spent.",
+      "choice": "soul: strong, weak"
+    },
+    {
+      "name": "Meditative Channelling",
+      "book": "Champions of Order",
+      "page": 75,
+      "requirement": "Spellcasting (any); Training (2) in Channelling",
+      "repeatable": false,
+      "effect": "At the start of your turn, as a Free Action, enter a meditative state: double your Training in Channelling, but you gain the Blinded Condition and cannot Move or Charge that turn. It lasts until the start of your next turn."
+    },
+    {
+      "name": "Mimic",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "After listening to an intelligent creature speak for at least a minute, you can unerringly mimic its voice and speech patterns."
+    },
+    {
+      "name": "Mollifier",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you take the Parley Action or try to resolve any violent conflict, you have Advantage on Opposed Tests to resolve it."
+    },
+    {
+      "name": "Mountain Stance",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": "Alarith Stoneguard (Archetype)",
+      "repeatable": false,
+      "effect": "As an Action, adopt the mountain stance. You cannot be knocked Prone or moved unless you allow it, and you have Advantage on Tests to knock creatures Prone. If you take the Shove Action in this stance, the target is shoved to an adjacent Zone. End the stance as a Free Action at any time."
+    },
+    {
+      "name": "Natural Weapons",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": "Sylvaneth",
+      "repeatable": false,
+      "effect": "Your hands are natural weapons that deal 1 + S Damage and have the Slashing and Rend Traits. You cannot be disarmed, but they can be broken. Broken natural weapons regrow and are repaired after a Rest, like your natural Armour.",
+      "notes": "'S' as printed; not defined in this knowledge base."
+    },
+    {
+      "name": "Nav-League Member",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": "Duardin (Kharadron Overlords); Training (1) and Focus (1) in Survival",
+      "repeatable": false,
+      "effect": "You double your Training in Survival when directing a ship in flight or finding the safest route. When using Aetheric Lenses (Soulbound p. 113), you gain Aethersight: spend a Mettle to attempt to unbind a spell cast by a creature in your Zone, using Mind (Survival) (see Unbind, Soulbound p. 91)."
+    },
+    {
+      "name": "Obvious Threat",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": "Training (2) in Intimidation",
+      "repeatable": false,
+      "effect": "While you are within Close Range of an enemy, its Defence decreases one step against all Attacks other than yours."
+    },
+    {
+      "name": "Old Enemy",
+      "book": "Champions of Order",
+      "page": 76,
+      "requirement": "Mortally Wounded or killed by a creature of the chosen type",
+      "repeatable": true,
+      "effect": "Choose a creature type: Automaton, Beast, Daemon, Mortal, Spirit or Undead. Your Melee and Accuracy increase one step when attacking creatures of that type. Repeatable: choose a new type each time.",
+      "choice": "creature type: Automaton, Beast, Daemon, Mortal, Spirit, Undead"
+    },
+    {
+      "name": "Pain Is Power",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": "Spellcasting (any); Focus (2) in Channelling",
+      "repeatable": false,
+      "effect": "Once per turn when you suffer a Wound, use a Free Action to immediately cast a single spell. Gain bonus dice to the Channelling Test by Wound severity: +1d6 Minor, +2d6 Serious, +3d6 Deadly."
+    },
+    {
+      "name": "Practised Poisoner",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": "Training (1) and Focus (1) in Dexterity",
+      "repeatable": false,
+      "effect": "Once per turn, apply poison to a weapon or hide it in food or drink as a Free Action. Advantage on Opposed Tests to conceal this. You cannot accidentally poison yourself while handling poison."
+    },
+    {
+      "name": "Prepared",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": "Training (1) and Focus (1) in Awareness",
+      "repeatable": false,
+      "effect": "Add 1d6 to Tests you make during your first turn in combat."
+    },
+    {
+      "name": "Pressing Attack",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": "Training (1) or Focus (1) in Might",
+      "repeatable": false,
+      "effect": "If you get a 6 on a melee Attack, after determining Damage you may use a Free Action to attempt to Shove the target. If you succeed, you may knock it Prone instead of pushing it away."
+    },
+    {
+      "name": "Prophetic Dreams",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "At the end of a Rest, roll 2d6 on the Prophetic Dreams table. 2: your nightmares foretell the end of the Mortal Realms; you fear it may come to pass. You do not receive the benefits of the Rest, and Doom increases by 1. 3: one truth, clue or relevant information about a current Long-term Goal of another party member. 4–5: the same, for a current Short-term Goal of another party member. 6–9: no dreams or visions. 10–11: the same, for one of your current Short-term Goals. 12: the same, for one of your current Long-term Goals. The GM is encouraged to provide the information as descriptive scenes.",
+      "choice": null,
+      "table": "2d6: 2 Doom+1 no Rest benefit; 3 party Long-term Goal; 4–5 party Short-term Goal; 6–9 nothing; 10–11 own Short-term Goal; 12 own Long-term Goal"
+    },
+    {
+      "name": "Read Lips",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You can understand speech by watching a creature speak."
+    },
+    {
+      "name": "Ricochet",
+      "book": "Champions of Order",
+      "page": 77,
+      "requirement": "Training (2) and Focus (2) in Ballistic Skill",
+      "repeatable": false,
+      "effect": "When you make a ranged Attack, the weapon gains the Spread Trait (Soulbound p. 106). Alternatively, when you attack with a weapon that has the Thrown Trait, you may have it ricochet and return to your hand after the attack."
+    },
+    {
+      "name": "Ruthless",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Training (1) in Determination",
+      "repeatable": false,
+      "effect": "When you win an Opposed Test against a creature, add 1 success for each level of Training you have in Determination."
+    },
+    {
+      "name": "Safe House",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": null,
+      "repeatable": true,
+      "effect": "A private, reliably safe place (worked out with the GM) to lay low and recuperate. It is unknown to outsiders and protects occupants against conventional threats and the elements. Magical detection is not usually foiled. Repeatable: a new safe house each time. If one is compromised, the GM may give a replacement.",
+      "downtimeNote": "Location is set with the GM."
+    },
+    {
+      "name": "Sceptic's Armour",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Focus (1) in Theology",
+      "repeatable": false,
+      "effect": "If a Miracle targets you or your Zone and you are aware of it, add your Focus in Theology to Tests to resist its effects."
+    },
+    {
+      "name": "Scourge",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Intuition and Awareness Tests to recognise Chaos corruption in creatures trying to conceal it. When your Binding undertakes the Cleanse Corruption Endeavour, one ally may take a different Endeavour instead.",
+      "downtimeNote": "Cleanse Corruption Endeavour, DM-run."
+    },
+    {
+      "name": "Shadow Leap",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Khainite Shadowstalker (Archetype)",
+      "repeatable": false,
+      "effect": "If you are standing fully in shadow, use your Move to instantly reappear at any location within Long Range that is also in shadow and large enough to conceal you. Then make a Body (Stealth) Test as a Free Action."
+    },
+    {
+      "name": "Shining Company",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Vanari Warrior (Archetype)",
+      "repeatable": false,
+      "effect": "When you start your turn within Close Range of an ally, use a Free Action to fight in formation and choose Melee, Accuracy or Defence. Until the start of your next turn you both increase the chosen ability one step. Lost if either of you moves outside Close Range of the other."
+    },
+    {
+      "name": "Siege Specialist",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Training (1) in Crafting",
+      "repeatable": false,
+      "effect": "You deal double Damage when targeting static structures, such as doors, walls or barricades."
+    },
+    {
+      "name": "Soul-Scarred",
+      "book": "Champions of Order",
+      "page": 78,
+      "requirement": "Soul (3)",
+      "repeatable": false,
+      "effect": "The injury can never be healed, even by magic or Reforging. You have one less space on your Wound Track. Your maximum Mettle increases by 1."
+    },
+    {
+      "name": "Speed Reading",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "You read most books in about an hour. Your ability to recall their contents is unchanged."
+    },
+    {
+      "name": "Spellcasting (High Peaks)",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": "Aelf (Lumineth Realm-lords), Training (1) and Focus (1) in Channelling",
+      "repeatable": false,
+      "effect": "When you take this Talent, you learn the spells Arcane Bolt and Mystic Shield, and can choose 4 more spells from the Common Spell list and the Lore of the High Peaks. For more information on Spellcasting, see Soulbound, page 266.",
+      "choice": "lore: High Peaks",
+      "lores": [
+        "High Peaks"
+      ]
+    },
+    {
+      "name": "Spell Weave",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": "Spellcasting (any); Training (3) or Focus (3) in Channelling",
+      "repeatable": false,
+      "effect": "As an Action, select two different spells you know and make a Channelling Test. Difficulty is the higher of the two spells' Difficulties, and Complexity is the combined Complexity of both (e.g. DN 4:2 and 5:1 give DN 5:3). On success both spells are cast, with additional successes applied to each spell's Overcast, and each may have different targets. On failure you suffer a Serious Wound, and when rolling on the Price of Failure table, roll twice and apply the higher result."
+    },
+    {
+      "name": "Stalwart Guardian",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you take the Defend Action to protect an ally, your Defence increases one step. You have Advantage on Body (Might) Tests using Defend to stop a creature entering your Zone."
+    },
+    {
+      "name": "Stand and Fire",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Once per round, when an enemy moves into your Zone, use a Free Action to make a ranged Attack against it."
+    },
+    {
+      "name": "Stay on Your Toes",
+      "book": "Champions of Order",
+      "page": 79,
+      "requirement": "Training (1) and Focus (1) in Reflexes",
+      "repeatable": false,
+      "effect": "Your Defence increases one step against Attacks made by enemies lower in the Initiative order than you."
+    },
+    {
+      "name": "Stirring Voice",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests to elicit emotional responses from listeners through your voice (singing, intimidating, garnering pity). People pay attention when you speak and easily recognise your voice."
+    },
+    {
+      "name": "Studied Defence",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": "Training (1) and Focus (1) in Awareness",
+      "repeatable": false,
+      "effect": "Spend an Action to study an enemy you can see within Long Range. Until your next Rest, your Defence increases one step against that target's attacks. Only one target at a time."
+    },
+    {
+      "name": "Sure-Footed",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Ignore the effects of ground-based Difficult Terrain when moving. When an effect would force you Prone, roll 1d6; on a 6 you keep your feet. If Prone, stand up as a Free Action on your turn."
+    },
+    {
+      "name": "Swagger",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Advantage on Opposed Tests where outward confidence matters (convincing someone you're right for a job, bluffing, taking credit). Most people accept your outrageous claims and seldom call your bluffs."
+    },
+    {
+      "name": "Take Aim",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": "Focus (1) in Dexterity",
+      "repeatable": false,
+      "effect": "As an Action, aim at a target you can see. Until the end of your next turn, your Accuracy against it increases by a number of steps equal to your Focus in Dexterity. Ends early if you take an Action other than attacking the target."
+    },
+    {
+      "name": "Tempt Fate",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you complete a Rest, roll 2d6 and the GM rolls 1d6. If your sum is less than or equal to the GM's roll, Doom increases by 1. If your sum is greater, you gain 2 Fate points. Before a Test, spend a Fate point to replace one die in your pool with a 6. You can never hold more than 2 unspent Fate points.",
+      "notes": "Fate points are not defined in the Corebook; track them as a counter on the sheet."
+    },
+    {
+      "name": "Territorial",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Once per round, as a Free Action, make a melee Attack against an enemy that moves into Close Range of you. With a Reach weapon, you may do so when an enemy enters your Zone."
+    },
+    {
+      "name": "Test of Wrath",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": "Duardin (Fyreslayer); Soul (4)",
+      "repeatable": false,
+      "effect": "You can have a number of active ur-gold runes greater than your Soul. For each rune beyond your Soul, you have one less space on your Wound Track. This does not count as a Wound and cannot be healed. When active runes are equal to or less than your Soul, the Wound Track returns to normal. See Soulbound p. 117 for ur-gold runes."
+    },
+    {
+      "name": "Thoughtful",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you make a Mind Test and can afford to mull things over, double the dice gained from Training in the Skill being Tested. Not for reflexive actions, conversation, combat or spellcasting."
+    },
+    {
+      "name": "Tinkerer",
+      "book": "Champions of Order",
+      "page": 80,
+      "requirement": "Training (1) and Focus (1) in Crafting",
+      "repeatable": false,
+      "effect": "The Complexity of Tests to modify or repair existing items (not creating new ones) is reduced by 1."
+    },
+    {
+      "name": "Tireless",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Training (1) in Determination and Fortitude",
+      "repeatable": false,
+      "effect": "When an Endeavour requires an Extended Test, you can make 1 additional Test.",
+      "downtimeNote": "Extended Tests in Endeavours, DM-run."
+    },
+    {
+      "name": "Trap Savvy",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Focus (1) in Dexterity and Survival",
+      "repeatable": false,
+      "effect": "When you build, modify, set or disarm a trap, double the bonus gained from any Focus in the Skill being tested."
+    },
+    {
+      "name": "Trophy Taker",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you defeat a Champion or Chosen type enemy, you may claim an unmistakable trophy from its body. Once per combat, as a Free Action, recover 1 Mettle or recover from the Frightened Condition by displaying a trophy. Each trophy works once."
+    },
+    {
+      "name": "Unbowed",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Whenever you would become Prone due to failing a Test or a magical effect, you may immediately make a DN 6:1 Body (Determination) Test to resist."
+    },
+    {
+      "name": "Unbridled Malice",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Spite-Revenant",
+      "repeatable": false,
+      "effect": "The first time you make a melee attack against a creature, it makes a DN 4:X Soul (Determination) Test, where X is the Damage it suffered. On failure it is Frightened until the end of its next turn."
+    },
+    {
+      "name": "Unnerving Grace",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Body (4); Training (1) in Stealth",
+      "repeatable": false,
+      "effect": "When you make a Body (Intimidation) Test, you may use Stealth in place of Intimidation and gain Advantage on the Test."
+    },
+    {
+      "name": "Unstoppable Force",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Body (3); Training (1) in Weapon Skill",
+      "repeatable": false,
+      "effect": "When you Charge, ignore Difficult Terrain and add 1d6 to your dice pool for the attack."
+    },
+    {
+      "name": "Ur-gold Mastery",
+      "book": "Champions of Order",
+      "page": 81,
+      "requirement": "Zharrgrim; Focus (2) in Devotion and Theology",
+      "repeatable": false,
+      "effect": "As an Action, reactivate an inert ur-gold rune (yours or another Fyreslayer's). It does not count towards the target's total runes. Lasts until your next period of downtime. Only one inert rune per creature can be reactivated this way, and a creature cannot have multiple inert runes reactivated at once. Another Zharrgrim targeting the same creature has no effect."
+    },
+    {
+      "name": "Vexation",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Training (1) in Guile and Intuition",
+      "repeatable": false,
+      "effect": "When a creature that can see or hear you within Medium Range makes a Test, spend a Mettle to remove dice from its pool equal to your Training in Guile."
+    },
+    {
+      "name": "Virtuoso",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Focus (1) in Entertain",
+      "repeatable": false,
+      "effect": "Choose one kind of performance (storytelling, jokes, singing, acting, writing or oration). When you make an Entertain Test for that kind, double the bonus gained from your Focus in Entertain.",
+      "choice": "performance type"
+    },
+    {
+      "name": "Warded",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Training (2) and Focus (2) in Arcana",
+      "repeatable": false,
+      "effect": "Take 1 less Damage when a spell damages you."
+    },
+    {
+      "name": "Weight of Destiny",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "Your Binding's maximum Soulfire increases by 1. Once per adventure you can recover a Soulfire at any time. Each period of downtime without progress toward your destiny increases Doom by 1; if you actively avoided it, Doom increases by 2.",
+      "downtimeNote": "Doom changes at downtime, DM-run."
+    },
+    {
+      "name": "Well-Connected",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": null,
+      "repeatable": false,
+      "effect": "When you undertake the Contacts Endeavour, you may make or strengthen one additional contact.",
+      "downtimeNote": "Contacts Endeavour, DM-run."
+    },
+    {
+      "name": "Witch's Hammer",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Training (3) in Arcana; Focus (3) in Weapon Skill; a melee weapon",
+      "repeatable": false,
+      "effect": "When a creature in your Zone casts a spell, spend a Mettle to attempt to unbind it using Body (Weapon Skill) (see Unbind, Soulbound p. 91)."
+    },
+    {
+      "name": "Word on the Street",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Focus (1) in Lore",
+      "repeatable": false,
+      "effect": "When you make a Lore Test to learn about local news and rumours, double the bonus gained from your Focus in Lore."
+    },
+    {
+      "name": "Zealotry",
+      "book": "Champions of Order",
+      "page": 82,
+      "requirement": "Training (1) in Devotion",
+      "repeatable": false,
+      "effect": "When you make an Intimidation Test, you may add your Training in Devotion to your dice pool."
+    }
+  ],
+  "lores": [
+    {
+      "name": "Amber",
+      "page": 89,
+      "requirement": null,
+      "effect": "Lore of Ghur: the hunter and the hunted, the beast and its prey."
+    },
+    {
+      "name": "Amethyst",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Shyish: endings and death."
+    },
+    {
+      "name": "Bright",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Aqshy: flames and burning passions."
+    },
+    {
+      "name": "Celestial",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Azyr: the unknown, prognostication, storms and the stars."
+    },
+    {
+      "name": "Gold",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Chamon: metallurgies and transmutations."
+    },
+    {
+      "name": "Grey",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Ulgu: shadow, mist, illusions and lies."
+    },
+    {
+      "name": "Jade",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Ghyran: growth, healing and the power of nature."
+    },
+    {
+      "name": "Light",
+      "page": 90,
+      "requirement": null,
+      "effect": "Lore of Hysh: illumination, purity and truth; opposes Grey magic."
+    },
+    {
+      "name": "The Deeps",
+      "page": 90,
+      "requirement": "Aelf (Idoneth Deepkin)",
+      "effect": "Lore of the Idoneth: abyssal depths and the dark corners of a living being's psyche."
+    }
+  ]
+}

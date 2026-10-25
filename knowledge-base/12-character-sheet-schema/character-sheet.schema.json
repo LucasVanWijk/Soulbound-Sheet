@@ -1,0 +1,626 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "soulbound/character-sheet.schema.json",
+  "title": "Soulbound Character Sheet",
+  "description": "One player character. Field names follow the corebook character sheet (pp. 343-344).",
+  "type": "object",
+  "required": [
+    "identity",
+    "attributes",
+    "skills",
+    "xp"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": [
+        "name",
+        "archetype",
+        "species"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "archetype": {
+          "type": "string",
+          "description": "Archetype name, or 'Freeform'"
+        },
+        "species": {
+          "type": "string",
+          "enum": [
+            "Human",
+            "Stormcast Eternal",
+            "Aelf",
+            "Duardin",
+            "Sylvaneth",
+            "Other"
+          ],
+          "description": "Other allows new Species from Champions of Order / Steam and Steel once added"
+        },
+        "faction": {
+          "type": "string"
+        },
+        "subfaction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "age": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "eyes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hair": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "weight": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distinguishingFeatures": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "xp": {
+      "type": "object",
+      "required": [
+        "total",
+        "spent"
+      ],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "spent": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ledger": {
+          "type": "array",
+          "description": "Every XP purchase, so the app can show history and undo the latest purchase. Cost is the XP spent on that step.",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "target",
+              "cost"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "attribute",
+                  "skill-training",
+                  "skill-focus",
+                  "talent",
+                  "lore",
+                  "miracle",
+                  "adjustment"
+                ]
+              },
+              "target": {
+                "type": "string",
+                "description": "Attribute, Skill, Talent, Lore or Miracle name"
+              },
+              "from": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "to": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "cost": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "body",
+        "mind",
+        "soul"
+      ],
+      "properties": {
+        "body": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "mind": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "soul": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "Exactly the 24 Skills on the sheet, one entry each.",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "training",
+          "focus"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "Arcana",
+              "Athletics",
+              "Awareness",
+              "Ballistic Skill",
+              "Beast Handling",
+              "Channelling",
+              "Crafting",
+              "Determination",
+              "Devotion",
+              "Dexterity",
+              "Entertain",
+              "Fortitude",
+              "Guile",
+              "Intimidation",
+              "Intuition",
+              "Lore",
+              "Medicine",
+              "Might",
+              "Nature",
+              "Reflexes",
+              "Stealth",
+              "Survival",
+              "Theology",
+              "Weapon Skill"
+            ]
+          },
+          "training": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "focus": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "core": {
+            "type": "boolean",
+            "description": "True for the Archetype Core Skill (starts with Training 1 and Focus 1)"
+          }
+        }
+      }
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "talents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "choice": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Chosen option for Talents marked (Choose), e.g. Blessed (Sigmar) or Spellcasting (Light)"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "archetype-core",
+              "archetype",
+              "species",
+              "subfaction",
+              "advancement",
+              "endeavour",
+              "gm-grant"
+            ]
+          },
+          "cost": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 2,
+            "description": "XP paid for this Talent (2 per Talent; additional Lores have extra cost)."
+          },
+          "timesTaken": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1,
+            "description": "For repeatable Talents: Combat Ready, Forbidden Knowledge, Spellcasting (Choose)."
+          }
+        }
+      }
+    },
+    "derived": {
+      "type": "object",
+      "description": "Calculated values (cacheable). See 01-core-rules/derived-stats.md",
+      "properties": {
+        "melee": {
+          "type": "integer"
+        },
+        "accuracy": {
+          "type": "integer"
+        },
+        "defence": {
+          "type": "integer"
+        },
+        "initiative": {
+          "type": "integer"
+        },
+        "armour": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "naturalAwareness": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "toughness": {
+          "type": "object",
+          "properties": {
+            "current": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "mettle": {
+          "type": "object",
+          "properties": {
+            "current": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "woundSpaces": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "combat": {
+      "type": "object",
+      "properties": {
+        "melee": {
+          "$ref": "#/$defs/ladderRating"
+        },
+        "accuracy": {
+          "$ref": "#/$defs/ladderRating"
+        },
+        "defence": {
+          "$ref": "#/$defs/ladderRating"
+        }
+      }
+    },
+    "wounds": {
+      "type": "object",
+      "properties": {
+        "spaces": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          },
+          "description": "true = filled. Length = (Body+Mind+Soul)/2 rounded up, +2 for Duardin"
+        },
+        "mortallyWounded": {
+          "type": "boolean"
+        },
+        "deathTest": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "dn": {
+              "type": "integer"
+            },
+            "complexity": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "attacks": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "weapon"
+        ],
+        "properties": {
+          "weapon": {
+            "type": "string"
+          },
+          "pool": {
+            "type": "string",
+            "description": "Dice pool, e.g. '4d6'"
+          },
+          "focus": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "damage": {
+            "type": "string",
+            "description": "e.g. '1+S'"
+          },
+          "traits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "slots": {
+          "type": "object",
+          "properties": {
+            "head": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "cloak": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "armour": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rightHand": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "leftHand": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "arms": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "boots": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "jewelry": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "other1": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "other2": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "otherGear": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "currency": {
+      "type": "object",
+      "description": "Aqua Ghyranis. 1 phial = 10 drops; 1 sphere = 10 phials = 100 drops",
+      "properties": {
+        "drops": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "phials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "spheres": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "spellsAndMiracles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "spell",
+              "miracle"
+            ]
+          },
+          "dnOrCost": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "range": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "lore": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "For spells: Common, Amber, Amethyst, Bright, Celestial, Gold, Grey, Jade, Light, The Deeps."
+          },
+          "god": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "For miracles: Universal, Alarielle, The Ethersea, Grimnir, Khaine, Sigmar."
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "lore-talent",
+              "miracle-talent",
+              "endeavour",
+              "gm-grant"
+            ]
+          }
+        }
+      }
+    },
+    "background": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "portrait": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Image path or URL"
+    },
+    "lodge": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fyreslayer lodge, Kharadron sky-port, Sylvaneth glade, Idoneth enclave, Stormhost etc. Used for subfaction tracking"
+    },
+    "bindingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Reference to party-sheet.schema.json partyName / id"
+    }
+  },
+  "$defs": {
+    "ladderRating": {
+      "type": "string",
+      "enum": [
+        "Poor",
+        "Average",
+        "Good",
+        "Great",
+        "Superb",
+        "Extraordinary"
+      ]
+    }
+  }
+}

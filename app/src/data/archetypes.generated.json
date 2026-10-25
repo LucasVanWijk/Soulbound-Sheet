@@ -1,0 +1,2121 @@
+[
+  {
+    "id": "hag-priestess",
+    "name": "Hag Priestess",
+    "faction": "Daughters of Khaine",
+    "page": 55,
+    "summary": "",
+    "species": "Aelf",
+    "subfaction": "Daughters of Khaine",
+    "attributes": {
+      "body": 2,
+      "mind": 2,
+      "soul": 4
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Determination",
+      "Devotion",
+      "Dexterity",
+      "Guile",
+      "Intuition",
+      "Lore",
+      "Medicine",
+      "Reflexes",
+      "Stealth",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Devotion",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blessed (Khaine)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Backstab",
+        "requirement": true
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Night Vision",
+        "requirement": false
+      }
+    ],
+    "miracleGod": "Khaine",
+    "equipment": [
+      {
+        "options": [
+          "Ceremonial armour (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "sacrificial blade (Dagger)"
+        ]
+      },
+      {
+        "options": [
+          "bloodstained ritual chalice (Holy Symbol)"
+        ]
+      },
+      {
+        "options": [
+          "a whetstone"
+        ]
+      },
+      {
+        "options": [
+          "manacles"
+        ]
+      },
+      {
+        "options": [
+          "pestle and mortar"
+        ]
+      }
+    ],
+    "drops": 280
+  },
+  {
+    "id": "witch-aelf",
+    "name": "Witch Aelf",
+    "faction": "Daughters of Khaine",
+    "page": 56,
+    "summary": "",
+    "species": "Aelf",
+    "subfaction": "Daughters of Khaine",
+    "attributes": {
+      "body": 3,
+      "mind": 1,
+      "soul": 3
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Devotion",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Intimidation",
+      "Reflexes",
+      "Stealth",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Weapon Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blood Frenzy"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Ambidextrous",
+        "requirement": false
+      },
+      {
+        "name": "Backstab",
+        "requirement": true
+      },
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Contortionist",
+        "requirement": false
+      },
+      {
+        "name": "Graceful Landing",
+        "requirement": false
+      },
+      {
+        "name": "Relentless Assault",
+        "requirement": false
+      },
+      {
+        "name": "Vanish",
+        "requirement": true
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Leather armour (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "two sacrificial blades (2 × Dagger)"
+        ]
+      },
+      {
+        "options": [
+          "three phials of basic poison"
+        ]
+      },
+      {
+        "options": [
+          "a bottle of acid"
+        ]
+      }
+    ],
+    "drops": 220
+  },
+  {
+    "id": "battlemage",
+    "name": "Battlemage",
+    "faction": "Free Peoples",
+    "page": 49,
+    "summary": "A wizard of the Collegiate Arcane, trained to harness the magic of the realms.",
+    "species": "Human",
+    "subfaction": null,
+    "attributes": {
+      "body": 1,
+      "mind": 4,
+      "soul": 2
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Arcana",
+      "Awareness",
+      "Channelling",
+      "Crafting",
+      "Determination",
+      "Dexterity",
+      "Guile",
+      "Intuition",
+      "Lore",
+      "Medicine",
+      "Reflexes",
+      "Theology"
+    ],
+    "coreSkill": "Channelling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Spellcasting (choose)",
+      "Unbind"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 2,
+    "talentOptions": [
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Loyal Companion (choose)",
+        "requirement": false
+      },
+      {
+        "name": "Unbreakable Spells",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Wizard's staff (Quarterstaff)"
+        ]
+      },
+      {
+        "options": [
+          "Battlemage robes of your Lore (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "an arcane focus"
+        ]
+      },
+      {
+        "options": [
+          "a grimoire"
+        ]
+      },
+      {
+        "options": [
+          "an Aqshian coal"
+        ]
+      },
+      {
+        "options": [
+          "ink and quill"
+        ]
+      },
+      {
+        "options": [
+          "chalk"
+        ]
+      },
+      {
+        "options": [
+          "a number of small pouches with various oddities"
+        ]
+      }
+    ],
+    "drops": 185
+  },
+  {
+    "id": "black-ark-corsair",
+    "name": "Black Ark Corsair",
+    "faction": "Free Peoples",
+    "page": 50,
+    "summary": "With salt water in your veins, you cross the hostile seas of the Mortal Realms in search of fortune.",
+    "species": "Aelf",
+    "subfaction": null,
+    "attributes": {
+      "body": 3,
+      "mind": 2,
+      "soul": 2
+    },
+    "skillXp": 12,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Beast Handling",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Intimidation",
+      "Intuition",
+      "Medicine",
+      "Nature",
+      "Reflexes",
+      "Survival",
+      "Stealth",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Weapon Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "The Bigger They Are"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Ambidextrous",
+        "requirement": false
+      },
+      {
+        "name": "Animal Friend",
+        "requirement": false
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Hunter",
+        "requirement": false
+      },
+      {
+        "name": "Opportunist",
+        "requirement": false
+      },
+      {
+        "name": "Relentless Assault",
+        "requirement": false
+      },
+      {
+        "name": "Silver Tongue",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Corsair armour (Medium Armour)"
+        ]
+      },
+      {
+        "options": [
+          "a repeater handbow and cutlass (Sword)",
+          "two cutlasses"
+        ]
+      },
+      {
+        "options": [
+          "Sea-dragon cloak"
+        ]
+      },
+      {
+        "options": [
+          "a waterskin filled with strong alcohol"
+        ]
+      },
+      {
+        "options": [
+          "a trophy from a beast you've slain"
+        ]
+      }
+    ],
+    "drops": 45
+  },
+  {
+    "id": "darkling-sorceress",
+    "name": "Darkling Sorceress",
+    "faction": "Free Peoples",
+    "page": 51,
+    "summary": "A master of enchantment and illusion; everyone else is a tool to satisfy your whim.",
+    "species": "Aelf",
+    "subfaction": null,
+    "attributes": {
+      "body": 1,
+      "mind": 3,
+      "soul": 3
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Arcana",
+      "Channelling",
+      "Devotion",
+      "Guile",
+      "Intimidation",
+      "Intuition",
+      "Lore",
+      "Theology",
+      "Reflexes",
+      "Stealth",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Channelling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Spellcasting (Grey)",
+      "Unbind"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Alley Cat",
+        "requirement": false
+      },
+      {
+        "name": "Criminal",
+        "requirement": false
+      },
+      {
+        "name": "Master of Disguise",
+        "requirement": false
+      },
+      {
+        "name": "Silver Tongued",
+        "requirement": false
+      },
+      {
+        "name": "Vanish",
+        "requirement": true
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Dark Leather (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "witchstaff (Quarterstaff)"
+        ]
+      },
+      {
+        "options": [
+          "ebon dagger"
+        ]
+      },
+      {
+        "options": [
+          "a small bottle of a favoured scent"
+        ]
+      },
+      {
+        "options": [
+          "a disguise kit"
+        ]
+      },
+      {
+        "options": [
+          "two phials of basic poison"
+        ]
+      },
+      {
+        "options": [
+          "a parchment listing names with drops of blood"
+        ]
+      }
+    ],
+    "drops": 220
+  },
+  {
+    "id": "excelsior-warpriest",
+    "name": "Excelsior Warpriest",
+    "faction": "Free Peoples",
+    "page": 52,
+    "summary": "A warrior-priest of the God-King, willing to do anything in the name of your divine liege.",
+    "species": "Human",
+    "subfaction": null,
+    "attributes": {
+      "body": 2,
+      "mind": 1,
+      "soul": 4
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Determination",
+      "Devotion",
+      "Fortitude",
+      "Intimidation",
+      "Lore",
+      "Medicine",
+      "Might",
+      "Reflexes",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Devotion",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blessed (Sigmar)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Intimidating Manner",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Loyal Companion (Gryph-hound)",
+        "requirement": false
+      },
+      {
+        "name": "Medic",
+        "requirement": true
+      },
+      {
+        "name": "Sigmar's Judgement",
+        "requirement": true
+      }
+    ],
+    "miracleGod": "Sigmar",
+    "equipment": [
+      {
+        "options": [
+          "Warpriest's vestments (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "a warhammer"
+        ]
+      },
+      {
+        "options": [
+          "a hand hammer"
+        ]
+      },
+      {
+        "options": [
+          "a Sigmarite Tome (Holy Symbol)"
+        ]
+      },
+      {
+        "options": [
+          "a cloak"
+        ]
+      },
+      {
+        "options": [
+          "a bedroll"
+        ]
+      },
+      {
+        "options": [
+          "an apothecary's satchel"
+        ]
+      },
+      {
+        "options": [
+          "a storm lantern"
+        ]
+      },
+      {
+        "options": [
+          "a pipette"
+        ]
+      }
+    ],
+    "drops": 160
+  },
+  {
+    "id": "trade-pioneer",
+    "name": "Trade Pioneer",
+    "faction": "Free Peoples",
+    "page": 53,
+    "summary": "A natural adventurer, you brave the Mortal Realms in search of riches, glory, and knowledge.",
+    "species": "Any",
+    "subfaction": null,
+    "attributes": {
+      "body": 2,
+      "mind": 3,
+      "soul": 2
+    },
+    "skillXp": 12,
+    "anySkill": true,
+    "skills": [
+      "Arcana",
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Beast Handling",
+      "Channelling",
+      "Crafting",
+      "Determination",
+      "Devotion",
+      "Dexterity",
+      "Entertain",
+      "Fortitude",
+      "Guile",
+      "Intimidation",
+      "Intuition",
+      "Lore",
+      "Medicine",
+      "Might",
+      "Nature",
+      "Reflexes",
+      "Stealth",
+      "Survival",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Survival",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Trader's Cache"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "A Warm Meal",
+        "requirement": false
+      },
+      {
+        "name": "Diplomat",
+        "requirement": false
+      },
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Loyal Companion (Mustori)",
+        "requirement": false
+      },
+      {
+        "name": "Savvy",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Traveller's gear (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "any Common melee weapon"
+        ]
+      },
+      {
+        "options": [
+          "any Common ranged weapon"
+        ]
+      },
+      {
+        "options": [
+          "one piece of Rare equipment"
+        ]
+      },
+      {
+        "options": [
+          "a tent"
+        ]
+      },
+      {
+        "options": [
+          "a blanket"
+        ]
+      },
+      {
+        "options": [
+          "5 days' rations"
+        ]
+      },
+      {
+        "options": [
+          "a backpack"
+        ]
+      }
+    ],
+    "drops": 55
+  },
+  {
+    "id": "auric-runesmiter",
+    "name": "Auric Runesmiter",
+    "faction": "Fyreslayers",
+    "page": 58,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Fyreslayers",
+    "attributes": {
+      "body": 3,
+      "mind": 2,
+      "soul": 3
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Ballistic Skill",
+      "Beast Handling",
+      "Crafting",
+      "Determination",
+      "Devotion",
+      "Fortitude",
+      "Intuition",
+      "Might",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Devotion",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blessed (Grimnir)",
+      "Sense Ur-Gold",
+      "Zharrgrim"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 2,
+    "talentOptions": [
+      {
+        "name": "Diplomat",
+        "requirement": false
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Guts",
+        "requirement": true
+      }
+    ],
+    "miracleGod": "Grimnir",
+    "equipment": [
+      {
+        "options": [
+          "Any three ur-gold runes"
+        ]
+      },
+      {
+        "options": [
+          "a runic iron and handaxe",
+          "a latch-axe (Greataxe)"
+        ]
+      },
+      {
+        "options": [
+          "a Forge Key (Holy Symbol)"
+        ]
+      },
+      {
+        "options": [
+          "enough ur-gold to forge one ur-gold rune"
+        ]
+      }
+    ],
+    "drops": 15
+  },
+  {
+    "id": "battlesmith",
+    "name": "Battlesmith",
+    "faction": "Fyreslayers",
+    "page": 59,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Fyreslayers",
+    "attributes": {
+      "body": 2,
+      "mind": 2,
+      "soul": 3
+    },
+    "skillXp": 12,
+    "anySkill": false,
+    "skills": [
+      "Arcana",
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Crafting",
+      "Determination",
+      "Devotion",
+      "Entertain",
+      "Fortitude",
+      "Guile",
+      "Intuition",
+      "Lore",
+      "Reflexes",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Entertain",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Legendary Saga"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Blessed (Grimnir)",
+        "requirement": true
+      },
+      {
+        "name": "Bulwark",
+        "requirement": false
+      },
+      {
+        "name": "Eidetic Memory",
+        "requirement": false
+      },
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Guts",
+        "requirement": true
+      },
+      {
+        "name": "Observant",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Rune of Iron Skin"
+        ]
+      },
+      {
+        "options": [
+          "Rune of Relentless Zeal"
+        ]
+      },
+      {
+        "options": [
+          "any one ur-gold rune"
+        ]
+      },
+      {
+        "options": [
+          "ancestral battleaxe"
+        ]
+      },
+      {
+        "options": [
+          "handaxe"
+        ]
+      },
+      {
+        "options": [
+          "icon of Grimnir"
+        ]
+      },
+      {
+        "options": [
+          "a palm-sized nugget of ur-gold"
+        ]
+      }
+    ],
+    "drops": 95
+  },
+  {
+    "id": "doomseeker",
+    "name": "Doomseeker",
+    "faction": "Fyreslayers",
+    "page": 60,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Fyreslayers",
+    "attributes": {
+      "body": 4,
+      "mind": 1,
+      "soul": 2
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Determination",
+      "Fortitude",
+      "Intimidation",
+      "Intuition",
+      "Might",
+      "Reflexes",
+      "Survival",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Weapon Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Barazakdum, the Doom-oath"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Battle Rage",
+        "requirement": false
+      },
+      {
+        "name": "Guts",
+        "requirement": true
+      },
+      {
+        "name": "Hard to Kill",
+        "requirement": false
+      },
+      {
+        "name": "Intimidating Manner",
+        "requirement": false
+      },
+      {
+        "name": "Iron Stomach",
+        "requirement": false
+      },
+      {
+        "name": "Underdog",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Rune of Iron Skin"
+        ]
+      },
+      {
+        "options": [
+          "any one ur-gold rune"
+        ]
+      },
+      {
+        "options": [
+          "any Common two-handed melee weapon",
+          "any two Common one-handed melee weapons"
+        ]
+      },
+      {
+        "options": [
+          "a memento from home"
+        ]
+      },
+      {
+        "options": [
+          "a bedroll"
+        ]
+      },
+      {
+        "options": [
+          "a few shavings of ur-gold"
+        ]
+      }
+    ],
+    "drops": 110
+  },
+  {
+    "id": "akhelian-emissary",
+    "name": "Akhelian Emissary",
+    "faction": "Idoneth Deepkin",
+    "page": 62,
+    "summary": "",
+    "species": "Aelf",
+    "subfaction": "Idoneth Deepkin",
+    "attributes": {
+      "body": 4,
+      "mind": 2,
+      "soul": 1
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Beast Handling",
+      "Determination",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Intimidation",
+      "Intuition",
+      "Reflexes",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Beast Handling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Loyal Companion (Fangmora)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Diplomat",
+        "requirement": false
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Intimidating Manner",
+        "requirement": false
+      },
+      {
+        "name": "Mounted Combatant",
+        "requirement": false
+      },
+      {
+        "name": "Night Vision",
+        "requirement": false
+      },
+      {
+        "name": "Opportunist",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Akhelian chestplate (Medium Armour)"
+        ]
+      },
+      {
+        "options": [
+          "a helsabre (Sword) and shield",
+          "a voltspear (Pike)"
+        ]
+      },
+      {
+        "options": [
+          "ethersea cloak"
+        ]
+      },
+      {
+        "options": [
+          "a necklace with a shard of seashell from your enclave"
+        ]
+      }
+    ],
+    "drops": 40
+  },
+  {
+    "id": "isharann-soulscryer",
+    "name": "Isharann Soulscryer",
+    "faction": "Idoneth Deepkin",
+    "page": 63,
+    "summary": "",
+    "species": "Aelf",
+    "subfaction": "Idoneth Deepkin",
+    "attributes": {
+      "body": 1,
+      "mind": 2,
+      "soul": 4
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Arcana",
+      "Awareness",
+      "Beast Handling",
+      "Devotion",
+      "Intuition",
+      "Lore",
+      "Nature",
+      "Survival",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Devotion",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blessed (The Ethersea)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Eidetic Memory",
+        "requirement": false
+      },
+      {
+        "name": "Loyal Companion (Scryfish)",
+        "requirement": false
+      },
+      {
+        "name": "Night Vision",
+        "requirement": false
+      },
+      {
+        "name": "Orientation",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": "The Ethersea",
+    "equipment": [
+      {
+        "options": [
+          "Mantle and robes (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "finger claws"
+        ]
+      },
+      {
+        "options": [
+          "dowerchime staff (Quarterstaff)"
+        ]
+      },
+      {
+        "options": [
+          "ethersea cloak"
+        ]
+      },
+      {
+        "options": [
+          "cyfar compass (Holy Symbol)"
+        ]
+      },
+      {
+        "options": [
+          "a waterskin of seawater"
+        ]
+      }
+    ],
+    "drops": 230
+  },
+  {
+    "id": "isharann-tidecaster",
+    "name": "Isharann Tidecaster",
+    "faction": "Idoneth Deepkin",
+    "page": 64,
+    "summary": "",
+    "species": "Aelf",
+    "subfaction": "Idoneth Deepkin",
+    "attributes": {
+      "body": 1,
+      "mind": 4,
+      "soul": 2
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Arcana",
+      "Beast Handling",
+      "Channelling",
+      "Determination",
+      "Devotion",
+      "Intuition",
+      "Lore",
+      "Nature",
+      "Reflexes",
+      "Survival"
+    ],
+    "coreSkill": "Channelling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Spellcasting (The Deeps)",
+      "Unbind"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Arcane Discipline",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Loyal Companion (Spirit Guardian)",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      },
+      {
+        "name": "Unbreakable Spells",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Azure scales (Light Armour)"
+        ]
+      },
+      {
+        "options": [
+          "pelagic staff (Quarterstaff)"
+        ]
+      },
+      {
+        "options": [
+          "ethersea cloak"
+        ]
+      },
+      {
+        "options": [
+          "a carved Aelven rune meaning \"water\""
+        ]
+      },
+      {
+        "options": [
+          "two watertight scroll cases"
+        ]
+      }
+    ],
+    "drops": 200
+  },
+  {
+    "id": "aether-khemist",
+    "name": "Aether-Khemist",
+    "faction": "Kharadron Overlords",
+    "page": 66,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Kharadron Overlords",
+    "attributes": {
+      "body": 2,
+      "mind": 4,
+      "soul": 1
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Ballistic Skill",
+      "Crafting",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Lore",
+      "Medicine",
+      "Nature",
+      "Reflexes",
+      "Survival",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Crafting",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Aether-Khemists Guild Member"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Acute Sense",
+        "requirement": false
+      },
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Iron Stomach",
+        "requirement": false
+      },
+      {
+        "name": "Medic",
+        "requirement": true
+      },
+      {
+        "name": "Observant",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Aether-Khemist's Rig"
+        ]
+      },
+      {
+        "options": [
+          "a Khemist's Kit"
+        ]
+      },
+      {
+        "options": [
+          "a book of notes and formulae"
+        ]
+      },
+      {
+        "options": [
+          "100D worth of aethercrafting materials"
+        ]
+      }
+    ],
+    "drops": 85
+  },
+  {
+    "id": "endrinmaster",
+    "name": "Endrinmaster",
+    "faction": "Kharadron Overlords",
+    "page": 67,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Kharadron Overlords",
+    "attributes": {
+      "body": 2,
+      "mind": 3,
+      "soul": 2
+    },
+    "skillXp": 10,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Crafting",
+      "Determination",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Intuition",
+      "Might",
+      "Reflexes",
+      "Survival",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Crafting",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Endrineers Guild Member"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 5,
+    "talentOptions": [
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Combat Repairs",
+        "requirement": false
+      },
+      {
+        "name": "Eidetic Memory",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Savvy",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      },
+      {
+        "name": "Sleight of Hand",
+        "requirement": false
+      },
+      {
+        "name": "Tactician",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Endrinmaster's Rig"
+        ]
+      },
+      {
+        "options": [
+          "Endrineer's Tools"
+        ]
+      },
+      {
+        "options": [
+          "a selection of sketches for experimental devices"
+        ]
+      }
+    ],
+    "drops": 45
+  },
+  {
+    "id": "skyrigger",
+    "name": "Skyrigger",
+    "faction": "Kharadron Overlords",
+    "page": 68,
+    "summary": "",
+    "species": "Duardin",
+    "subfaction": "Kharadron Overlords",
+    "attributes": {
+      "body": 3,
+      "mind": 3,
+      "soul": 1
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Crafting",
+      "Determination",
+      "Dexterity",
+      "Fortitude",
+      "Guile",
+      "Intuition",
+      "Reflexes",
+      "Survival",
+      "Weapon Skill"
+    ],
+    "coreSkill": null,
+    "coreSkillChoices": [
+      "Ballistic Skill",
+      "Crafting"
+    ],
+    "coreTalents": [],
+    "coreTalentChoices": [
+      "Endrineers Guild Member",
+      "Hit and Run"
+    ],
+    "talentPicks": 4,
+    "talentOptions": [
+      {
+        "name": "Combat Repairs",
+        "requirement": true
+      },
+      {
+        "name": "Demolitions Expert",
+        "requirement": true
+      },
+      {
+        "name": "Endrineers Guild Member",
+        "requirement": true
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Hit and Run",
+        "requirement": false
+      },
+      {
+        "name": "Quick Reload",
+        "requirement": false
+      },
+      {
+        "name": "Savvy",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Endrinrigger's Rig",
+          "Skywarden's Rig"
+        ]
+      },
+      {
+        "options": [
+          "any Common melee weapon"
+        ]
+      },
+      {
+        "options": [
+          "two aetheric grenades",
+          "skymines"
+        ]
+      },
+      {
+        "options": [
+          "a lucky charm"
+        ]
+      }
+    ],
+    "drops": 25
+  },
+  {
+    "id": "knight-azyros",
+    "name": "Knight-Azyros",
+    "faction": "Stormcast Eternals",
+    "page": 70,
+    "summary": "",
+    "species": "Stormcast Eternal",
+    "subfaction": null,
+    "attributes": {
+      "body": 3,
+      "mind": 2,
+      "soul": 4
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Determination",
+      "Devotion",
+      "Intimidation",
+      "Intuition",
+      "Medicine",
+      "Reflexes",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Devotion",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Blessed (Sigmar)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Diplomat",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Medic",
+        "requirement": true
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      }
+    ],
+    "miracleGod": "Sigmar",
+    "equipment": [
+      {
+        "options": [
+          "Sigmarite plate (Medium Armour)"
+        ]
+      },
+      {
+        "options": [
+          "starblade (Sword)"
+        ]
+      },
+      {
+        "options": [
+          "dagger"
+        ]
+      },
+      {
+        "options": [
+          "celestial wings"
+        ]
+      },
+      {
+        "options": [
+          "celestial beacon (Holy Symbol)"
+        ]
+      }
+    ],
+    "drops": 85
+  },
+  {
+    "id": "knight-incantor",
+    "name": "Knight-Incantor",
+    "faction": "Stormcast Eternals",
+    "page": 71,
+    "summary": "",
+    "species": "Stormcast Eternal",
+    "subfaction": null,
+    "attributes": {
+      "body": 3,
+      "mind": 4,
+      "soul": 2
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Arcana",
+      "Beast Handling",
+      "Channelling",
+      "Crafting",
+      "Determination",
+      "Intuition",
+      "Lore",
+      "Medicine",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Channelling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Spellcasting (Celestial)",
+      "Unbind"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 2,
+    "talentOptions": [
+      {
+        "name": "Forbidden Knowledge",
+        "requirement": false
+      },
+      {
+        "name": "Iron Will",
+        "requirement": true
+      },
+      {
+        "name": "Potent Spells",
+        "requirement": false
+      },
+      {
+        "name": "Scholar",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Sigmarite plate (Medium Armour)"
+        ]
+      },
+      {
+        "options": [
+          "incantor's staff (Quarterstaff)"
+        ]
+      },
+      {
+        "options": [
+          "dagger"
+        ]
+      },
+      {
+        "options": [
+          "tabard of the Sacrosanct Chamber"
+        ]
+      },
+      {
+        "options": [
+          "grimoire"
+        ]
+      },
+      {
+        "options": [
+          "scroll case"
+        ]
+      }
+    ],
+    "drops": 240
+  },
+  {
+    "id": "knight-questor",
+    "name": "Knight-Questor",
+    "faction": "Stormcast Eternals",
+    "page": 72,
+    "summary": "",
+    "species": "Stormcast Eternal",
+    "subfaction": null,
+    "attributes": {
+      "body": 4,
+      "mind": 2,
+      "soul": 3
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Determination",
+      "Fortitude",
+      "Intimidation",
+      "Lore",
+      "Might",
+      "Reflexes",
+      "Survival",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Weapon Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Heroic Challenge"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Bulwark",
+        "requirement": false
+      },
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Diplomat",
+        "requirement": false
+      },
+      {
+        "name": "Guts",
+        "requirement": true
+      },
+      {
+        "name": "Intimidating Manner",
+        "requirement": false
+      },
+      {
+        "name": "Underdog",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Sigmarite warplate (Heavy Armour)"
+        ]
+      },
+      {
+        "options": [
+          "questor warblade (Sword) and shield",
+          "any two-handed melee weapon"
+        ]
+      },
+      {
+        "options": [
+          "a cloak"
+        ]
+      },
+      {
+        "options": [
+          "a small pendant bearing the mark of your previous Stormhost"
+        ]
+      }
+    ],
+    "drops": 65
+  },
+  {
+    "id": "knight-venator",
+    "name": "Knight-Venator",
+    "faction": "Stormcast Eternals",
+    "page": 73,
+    "summary": "",
+    "species": "Stormcast Eternal",
+    "subfaction": null,
+    "attributes": {
+      "body": 3,
+      "mind": 3,
+      "soul": 3
+    },
+    "skillXp": 9,
+    "anySkill": false,
+    "skills": [
+      "Athletics",
+      "Awareness",
+      "Ballistic Skill",
+      "Beast Handling",
+      "Determination",
+      "Dexterity",
+      "Guile",
+      "Nature",
+      "Reflexes",
+      "Stealth",
+      "Survival",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Ballistic Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Loyal Companion (Star-eagle)"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Hunter",
+        "requirement": false
+      },
+      {
+        "name": "Orientation",
+        "requirement": false
+      },
+      {
+        "name": "Star-fated Arrow",
+        "requirement": false
+      },
+      {
+        "name": "Vanish",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Sigmarite plate (Medium Armour)"
+        ]
+      },
+      {
+        "options": [
+          "realmhunter's bow (Bow)"
+        ]
+      },
+      {
+        "options": [
+          "a quiver and arrows"
+        ]
+      },
+      {
+        "options": [
+          "storm gladius (Sword)"
+        ]
+      },
+      {
+        "options": [
+          "celestial wings"
+        ]
+      }
+    ],
+    "drops": 90
+  },
+  {
+    "id": "branchwych",
+    "name": "Branchwych",
+    "faction": "Sylvaneth",
+    "page": 75,
+    "summary": "",
+    "species": "Sylvaneth",
+    "subfaction": null,
+    "attributes": {
+      "body": 2,
+      "mind": 4,
+      "soul": 2
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Arcana",
+      "Beast Handling",
+      "Channelling",
+      "Crafting",
+      "Lore",
+      "Nature",
+      "Medicine",
+      "Theology",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Channelling",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Spellcasting (Jade)",
+      "Unbind"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 2,
+    "talentOptions": [
+      {
+        "name": "Animal Friend",
+        "requirement": false
+      },
+      {
+        "name": "Loyal Companion (Bittergrub)",
+        "requirement": false
+      },
+      {
+        "name": "Medic",
+        "requirement": true
+      },
+      {
+        "name": "Weapon Weave",
+        "requirement": false
+      },
+      {
+        "name": "Witch-Sight",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Greenwood scythe (Greatscythe)"
+        ]
+      },
+      {
+        "options": [
+          "a fragment of cyclestone from Ghyran"
+        ]
+      }
+    ],
+    "drops": 310
+  },
+  {
+    "id": "kurnoth-hunter",
+    "name": "Kurnoth Hunter",
+    "faction": "Sylvaneth",
+    "page": 76,
+    "summary": "",
+    "species": "Sylvaneth",
+    "subfaction": null,
+    "attributes": {
+      "body": 4,
+      "mind": 3,
+      "soul": 1
+    },
+    "skillXp": 6,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Ballistic Skill",
+      "Weapon Skill",
+      "Beast Handling",
+      "Fortitude",
+      "Might",
+      "Nature",
+      "Reflexes",
+      "Stealth"
+    ],
+    "coreSkill": null,
+    "coreSkillChoices": [
+      "Ballistic Skill",
+      "Weapon Skill"
+    ],
+    "coreTalents": [
+      "Ancestral Memories"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 2,
+    "talentOptions": [
+      {
+        "name": "Animal Friend",
+        "requirement": false
+      },
+      {
+        "name": "Bulwark",
+        "requirement": false
+      },
+      {
+        "name": "Hail of Doom",
+        "requirement": false
+      },
+      {
+        "name": "Hunter",
+        "requirement": false
+      },
+      {
+        "name": "Loyal Companion (Quiverling)",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Greatbow (Bow)"
+        ]
+      },
+      {
+        "options": [
+          "Greatsword",
+          "Greatscythe"
+        ]
+      }
+    ],
+    "drops": 280
+  },
+  {
+    "id": "tree-revenant-waypiper",
+    "name": "Tree-Revenant Waypiper",
+    "faction": "Sylvaneth",
+    "page": 77,
+    "summary": "",
+    "species": "Sylvaneth",
+    "subfaction": null,
+    "attributes": {
+      "body": 4,
+      "mind": 2,
+      "soul": 2
+    },
+    "skillXp": 7,
+    "anySkill": false,
+    "skills": [
+      "Awareness",
+      "Athletics",
+      "Entertain",
+      "Fortitude",
+      "Nature",
+      "Intuition",
+      "Intimidation",
+      "Reflexes",
+      "Survival",
+      "Weapon Skill"
+    ],
+    "coreSkill": "Weapon Skill",
+    "coreSkillChoices": [],
+    "coreTalents": [
+      "Martial Memories"
+    ],
+    "coreTalentChoices": [],
+    "talentPicks": 3,
+    "talentOptions": [
+      {
+        "name": "Acute Sense",
+        "requirement": false
+      },
+      {
+        "name": "Combat Ready",
+        "requirement": false
+      },
+      {
+        "name": "Fearless",
+        "requirement": false
+      },
+      {
+        "name": "Hunter",
+        "requirement": false
+      },
+      {
+        "name": "Observant",
+        "requirement": false
+      },
+      {
+        "name": "Opportunist",
+        "requirement": false
+      }
+    ],
+    "miracleGod": null,
+    "equipment": [
+      {
+        "options": [
+          "Any Common melee weapon"
+        ]
+      },
+      {
+        "options": [
+          "waypipes"
+        ]
+      }
+    ],
+    "drops": 280
+  }
+]

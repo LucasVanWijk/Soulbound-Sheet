@@ -1,0 +1,693 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Source: Champions of Order pp. 46–67 (subfaction bonuses). Each bonus is roughly the value of a Talent and is marked in the sheet's Talents list (Champions p. 19). referencesDowntime lists Endeavours the DM runs. referencesActions lists Corebook Actions (p. 144). referencesChampionsItems lists Champions equipment the bonus names (not yet transcribed). Talents the bonuses rely on are in talents.json. Lumineth Great Nations Oultrai, Aurathrai, Helon and Alumnia (Champions pp. 20–23) are not transcribed.",
+  "subfactions": [
+    {
+      "id": "lumineth-realm-lords-iliatha",
+      "name": "Iliatha",
+      "faction": "Lumineth Realm-lords",
+      "page": 22,
+      "bonusName": "Clone-twin",
+      "bonus": "If your character dies, your clone-twin is immediately bound in your place. The twin joins the Binding, can use Soulfire, and the party's max Soulfire does not decrease because of your death. The twin has your starting Attributes, Core Skill and Talents, and the XP you had when you died, which you may spend freely.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "lumineth-realm-lords-syar",
+      "name": "Syar",
+      "faction": "Lumineth Realm-lords",
+      "page": 22,
+      "bonusName": "Bedecked in Splendour",
+      "bonus": "At creation, add any weapon or armour Trait to one piece of your equipment (p. 104). When you take an Endeavour to create something, double dice gained from Crafting Training.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "lumineth-realm-lords-ymetrica",
+      "name": "Ymetrica",
+      "faction": "Lumineth Realm-lords",
+      "page": 23,
+      "bonusName": "Contemplation of the Peaks",
+      "bonus": "You always act last in the first round of combat, but act first every round thereafter unless someone takes *Seize the Initiative* or a similar Action. *Thoughtful* Talent (p. 80) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [
+        "Seize the Initiative"
+      ],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "lumineth-realm-lords-zaitrec",
+      "name": "Zaitrec",
+      "faction": "Lumineth Realm-lords",
+      "page": 23,
+      "bonusName": "Fast Learner",
+      "bonus": "*Spellcasting (any)* Talent is added to your Archetype's list. You ignore requirements for learning a Lore of Magic (e.g. needing to be Idoneth for The Deeps). When you take *Learn Spell*, you may learn an additional Common spell.",
+      "referencesDowntime": [
+        "Learn Spell"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-anvilgard",
+      "name": "Anvilgard",
+      "faction": "Free Peoples",
+      "page": 29,
+      "bonusName": "Illicit Dealings",
+      "bonus": "Choose any two Allies and Contacts listed on p. 123. You have a relationship with them as if made by the *Contacts* Endeavour, with access to each Benefit. Or choose one contact and gain its **Greater Benefit** instead. *Broken Realms* note: after Morathi's siege, Anvilgard is Har Kuron (Daughters of Khaine). The bonus assumes the pre-fall city.",
+      "referencesDowntime": [
+        "Contacts"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-brightspear",
+      "name": "Brightspear",
+      "faction": "Free Peoples",
+      "page": 29,
+      "bonusName": "Resourceful",
+      "bonus": "You may ignore tool requirements for any Test or Endeavour, but the Difficulty increases by 1. During downtime, in addition to other Endeavours, swap your Training and Focus in any one Skill with your Training and Focus in another Skill (even if you have none in the target Skill).",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-hammerhal-aqsha",
+      "name": "Hammerhal Aqsha",
+      "faction": "Free Peoples",
+      "page": 30,
+      "bonusName": "Military Acumen",
+      "bonus": "Double your Training in a Skill for Tests relating to military tactics or knowledge, and for the *Fortify* Endeavour. *Tactician* Talent (p. 91) is added to your Archetype's Talent list.",
+      "referencesDowntime": [
+        "Fortify"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-hammerhal-ghyra",
+      "name": "Hammerhal Ghyra",
+      "faction": "Free Peoples",
+      "page": 30,
+      "bonusName": "Stubborn Defiance",
+      "bonus": "You may take *Industrious* regardless of Species. The Complexity of any Death Test is reduced by 1 (minimum 1). If an effect would instantly kill you (e.g. a Bloodreaper's Decapitating Blow), you are Mortally Wounded instead.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-greywater-fastness",
+      "name": "Greywater Fastness",
+      "faction": "Free Peoples",
+      "page": 31,
+      "bonusName": "Heart of Industry",
+      "bonus": "At creation, choose one of: blunderbuss, rifle, two pistols, or repeater pistol, in addition to Archetype equipment. You may automatically pass any crafting Endeavour, but Doom increases by 1.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-excelsis",
+      "name": "Excelsis",
+      "faction": "Free Peoples",
+      "page": 31,
+      "bonusName": "All That Glimmers",
+      "bonus": "You start play with **1d6 Glimmerings** (shards of the Spear of Mallus). Using one has the same effect as casting *Prophecy* (p. 273) and lets you ask one question. A Glimmering is worth 100D. During downtime, you may convert 100D into 1 Glimmering, in addition to other Endeavours.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": [
+        "Glimmering"
+      ]
+    },
+    {
+      "id": "free-peoples-lethis",
+      "name": "Lethis",
+      "faction": "Free Peoples",
+      "page": 32,
+      "bonusName": "Talismans of Morrda",
+      "bonus": "Your weapons and armour count as **Magical** against Undead and Daemonic creatures.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-misth-vn",
+      "name": "Misthåvn",
+      "faction": "Free Peoples",
+      "page": 32,
+      "bonusName": "City of Scoundrels",
+      "bonus": "You start with a *False Identity* (p. 157) and ignore its requirements if you take that Endeavour later. You start play with one dose of any three Misthåvn narcotics (p. 108). You can always find someone to sell you narcotics in a city.",
+      "referencesDowntime": [
+        "False Identity"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-settler-s-gain",
+      "name": "Settler's Gain",
+      "faction": "Free Peoples",
+      "page": 33,
+      "bonusName": "Xintilogica",
+      "bonus": "When you Rest, you may arrange furniture, align objects, or carve geometric shapes. Roll 1d6. If the result is **≥ current Doom**, add an extra 1d6 to your choice of Mind or Soul Tests until your next Rest. If lower, nothing happens.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "free-peoples-vindicarum",
+      "name": "Vindicarum",
+      "faction": "Free Peoples",
+      "page": 33,
+      "bonusName": "Eye of Devotion",
+      "bonus": "When making Insight or Awareness Tests to spot Chaos, or Survival Tests to track its followers, add your Training in Theology to the pool. *Theology* is added to your Archetype's Skill list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "daughters-of-khaine-hagg-nar",
+      "name": "Hagg Nar",
+      "faction": "Daughters of Khaine",
+      "page": 35,
+      "bonusName": "Devoted Disciples",
+      "bonus": "When determining Defence, add your Body plus any levels of Training in Reflexes and Devotion. When making a Death Test, add dice equal to your Training in Devotion.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "daughters-of-khaine-draichi-ganeth",
+      "name": "Draichi Ganeth",
+      "faction": "Daughters of Khaine",
+      "page": 35,
+      "bonusName": "Rites of the Krish'lar",
+      "bonus": "When you kill a non-Minion enemy with a Slashing or Piercing weapon, your Defence increases one step until the end of combat (once per combat).",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "daughters-of-khaine-the-kraith",
+      "name": "The Kraith",
+      "faction": "Daughters of Khaine",
+      "page": 36,
+      "bonusName": "Revelry in Carnage",
+      "bonus": "Once per turn, when you kill a non-Minion enemy, regain 1 Mettle. You begin play with one dose of the *Venom of Nagendra* (p. 109).",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": [
+        "Venom of Nagendra"
+      ]
+    },
+    {
+      "id": "daughters-of-khaine-khailebron",
+      "name": "Khailebron",
+      "faction": "Daughters of Khaine",
+      "page": 37,
+      "bonusName": "The Unseen Hand of Khaine",
+      "bonus": "When determining Melee, add your Body, Weapon Skill and Training in Entertain. Add your Training in Entertain to Body (Stealth) Tests. *Spellcasting (Grey)* Talent (p. 89) is added to your Archetype list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "daughters-of-khaine-khelt-nar",
+      "name": "Khelt Nar",
+      "faction": "Daughters of Khaine",
+      "page": 37,
+      "bonusName": "Kuraith Blade",
+      "bonus": "You possess a **kuraith**, a dagger with the Magical Trait (p. 103). When you deal Damage with it, the target must make a DN 4:X Mind (Determination) Test, where X is the Damage suffered. On failure, the target is Stunned until the start of your next turn.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": [
+        "Kuraith"
+      ]
+    },
+    {
+      "id": "daughters-of-khaine-har-kuron",
+      "name": "Har Kuron",
+      "faction": "Daughters of Khaine",
+      "page": 37,
+      "bonusName": "Make an Example of the Weak",
+      "bonus": "When you kill a non-Minion enemy in melee, you may spend 1 Mettle to execute them dramatically. Allies in your Zone suffering from Charmed or Frightened recover immediately, and their Melee increases one step until the start of your next turn. *Only available after the Broken Realms: Morathi timeline. Check with the GM.*",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-vostarg",
+      "name": "Vostarg",
+      "faction": "Fyreslayers",
+      "page": 40,
+      "bonusName": "Legacy of Vosforge",
+      "bonus": "Add your Training in Lore to any Test to foster cooperation and unity. Advantage on Opposed Tests with Fyreslayers from other lodges. Add Training in Lore to an Entertain Test to use *Legendary Saga* (p. 89).",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-greyfyrd",
+      "name": "Greyfyrd",
+      "faction": "Fyreslayers",
+      "page": 40,
+      "bonusName": "Spoils of Victory",
+      "bonus": "At creation, choose any one Exotic item, or an extra 500D. When you undertake an earning Endeavour (e.g. *Labour*, p. 118), you earn double.",
+      "referencesDowntime": [
+        "Labour"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-lofnir",
+      "name": "Lofnir",
+      "faction": "Fyreslayers",
+      "page": 41,
+      "bonusName": "Inheritors of Vulcatrix",
+      "bonus": "You suffer half Damage from intense heat and flames (Hazards and spells). Your Defence increases one step against Beasts.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-tangrim",
+      "name": "Tangrim",
+      "faction": "Fyreslayers",
+      "page": 41,
+      "bonusName": "Lightning Oaths",
+      "bonus": "You have *Sigmar's Judgement* (p. 89), regardless of requirements. If you have *Blessed (Grimnir)* (p. 83), you may choose Miracles from the Miracles of Sigmar list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-ulrung",
+      "name": "Ulrung",
+      "faction": "Fyreslayers",
+      "page": 42,
+      "bonusName": "Embers of Grimnir",
+      "bonus": "You have *Ur-gold Mastery*, regardless of requirements. *Old Enemy (Undead)* (p. 76) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-thungur",
+      "name": "Thungur",
+      "faction": "Fyreslayers",
+      "page": 42,
+      "bonusName": "Light of the Pale Cast",
+      "bonus": "Add your Training in Athletics and Weapon Skill to your Initiative.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-caengan",
+      "name": "Caengan",
+      "faction": "Fyreslayers",
+      "page": 43,
+      "bonusName": "Scourge of Oath-breakers",
+      "bonus": "Advantage on Opposed Tests to broker deals and claim payment. If you are betrayed, manipulated or led astray by another, your Melee and Accuracy increase one step when attacking the betrayer or their followers.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "fyreslayers-baeldrag",
+      "name": "Baeldrag",
+      "faction": "Fyreslayers",
+      "page": 43,
+      "bonusName": "Delvingdoom",
+      "bonus": "Advantage on Awareness and Survival Tests to track Skaven and when travelling underground. *Old Enemy (Chaos)* (p. 76) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-ionrach",
+      "name": "Ionrach",
+      "faction": "Idoneth Deepkin",
+      "page": 46,
+      "bonusName": "Call Assembral",
+      "bonus": "Tell if people are amenable to working with you, and have Advantage on Opposed Tests to convince them. *Tactician* (p. 91) and *A Good Plan* (p. 70) are added to your Archetype's Talent list, and you may take them at creation even if you don't meet the requirements.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-dhom-hain",
+      "name": "Dhom-hain",
+      "faction": "Idoneth Deepkin",
+      "page": 47,
+      "bonusName": "Savage Fighter",
+      "bonus": "When you take the Charge Action, add dice equal to your Training in Athletics.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-nautilar",
+      "name": "Nautilar",
+      "faction": "Idoneth Deepkin",
+      "page": 48,
+      "bonusName": "Consummate Defenders",
+      "bonus": "When targeted by a Melee Attack from a creature who did not begin its turn in your Zone, your Defence increases one step. Your Archetype armour is made of wraithshell, giving an additional +1 Armour.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-briomdar",
+      "name": "Briomdar",
+      "faction": "Idoneth Deepkin",
+      "page": 48,
+      "bonusName": "Unstoppable Raiders",
+      "bonus": "No penalties from Difficult Terrain. Move at normal speed when swimming, climbing, squeezing and crawling. If a creature is blocking your way (e.g. with Defend), you have Advantage on the Test to get past it.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-mor-phann",
+      "name": "Mor'phann",
+      "faction": "Idoneth Deepkin",
+      "page": 47,
+      "bonusName": "A Disquieting Presence",
+      "bonus": "Creatures that move to Close Range with you, or start their turn there, must make a DN 4:X Soul (Determination) Test, where X is your Soul. On failure they are Frightened until the start of their next turn. A creature that passes is immune for 1 day. Other members of your Binding are permanently immune.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "idoneth-deepkin-fueth-n",
+      "name": "Fuethán",
+      "faction": "Idoneth Deepkin",
+      "page": 47,
+      "bonusName": "Blood in the Water",
+      "bonus": "If you, or a mount you control, makes a melee attack against a creature that has taken damage this turn, your Melee increases one step.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-nar",
+      "name": "Barak-Nar",
+      "faction": "Kharadron Overlords",
+      "page": 51,
+      "bonusName": "The Steering Hand",
+      "bonus": "When commanding a subordinate or speaking to a large group (council, protest), double the dice gained from Training in Guile and Intimidation. The *Stirring Voice* Talent (p. 80) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-zilfin",
+      "name": "Barak-Zilfin",
+      "faction": "Kharadron Overlords",
+      "page": 51,
+      "bonusName": "Windmaster",
+      "bonus": "If your aether-rig has an aether-endrin, its speed is Fast. If it does not, you may swap a part of your rig with the same power consumption for an aether-endrin instead. Gain an additional 1d6 to Awareness and Survival Tests when exploring an area for the first time.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-zon",
+      "name": "Barak-Zon",
+      "faction": "Kharadron Overlords",
+      "page": 52,
+      "bonusName": "For the Ironstar",
+      "bonus": "When Attacking a Champion or Chosen type enemy, your Melee and Accuracy increase one step.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-urbaz",
+      "name": "Barak-Urbaz",
+      "faction": "Kharadron Overlords",
+      "page": 52,
+      "bonusName": "Child of The Market City",
+      "bonus": "When you undertake the *Aethercraft*, *Endrineering* or *Shopping* Endeavours, the cost of equipment or materials is reduced by 50%, to a maximum saving of 500D. When you take *Run a Business* (p. 121), earn 4d6 × 10D instead of 2d6 × 10D.",
+      "referencesDowntime": [
+        "Aethercraft",
+        "Endrineering",
+        "Shopping",
+        "Run a Business"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-mhornar",
+      "name": "Barak-Mhornar",
+      "faction": "Kharadron Overlords",
+      "page": 53,
+      "bonusName": "Who Strikes First, Strikes Hardest",
+      "bonus": "Gain additional dice equal to your Training in Guile on your first attack in the first round of combat. If that attack is made during a surprise round, gain additional dice equal to twice your Training in Guile instead. The *Criminal* Talent (p. 84) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "kharadron-overlords-barak-thryng",
+      "name": "Barak-Thryng",
+      "faction": "Kharadron Overlords",
+      "page": 53,
+      "bonusName": "Chronicle of Grudges",
+      "bonus": "If attacked or wronged by a creature, you may add its name to your chronicle (create a name if you do not know it). Against a creature in your chronicle, Melee and Accuracy increase one step, but you have Disadvantage on all social Tests made to interact with it.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-hammers-of-sigmar",
+      "name": "Hammers of Sigmar",
+      "faction": "Stormcast Eternals",
+      "page": 58,
+      "bonusName": "We Cannot Fail",
+      "bonus": "When your Wound Track is partially filled and you are at 0 Toughness, you and allies in your Zone gain additional dice equal to your Training in Determination on all attacks. If you are Mortally Wounded, the bonus is twice your Training in Determination instead. You roll an additional 2d6 to determine how many times you have been Reforged before play begins.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-hallowed-knights",
+      "name": "Hallowed Knights",
+      "faction": "Stormcast Eternals",
+      "page": 58,
+      "bonusName": "Only the Faithful",
+      "bonus": "You may choose a Miracle of Sigmar or Universal Miracle that you know, in addition to any you already possess. You may use it without the Blessed Talent. The *Blessed (Sigmar)* Talent (p. 83) is added to your Archetype's Talent list.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-celestial-vindicators",
+      "name": "Celestial Vindicators",
+      "faction": "Stormcast Eternals",
+      "page": 59,
+      "bonusName": "Righteous Hatred",
+      "bonus": "Choose one target type: Daemons, Undead, or Mortals. For Mortals, choose a subtype (e.g. Skaven, Orruks, Corrupted by Chaos). You deal +1 Damage against enemies of that type. The *Old Enemy* Talent (p. 76) is added to your Archetype's Talent list. You must choose the target of your vengeance as your Old Enemy.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-anvils-of-the-heldenhammer",
+      "name": "Anvils of the Heldenhammer",
+      "faction": "Stormcast Eternals",
+      "page": 59,
+      "bonusName": "No True Death",
+      "bonus": "You ignore the Stunned Condition when Mortally Wounded, and reduce the Complexity of Death Tests by 1 (minimum DN 4:1). If you fail a Death Test, you die immediately, regardless of how many Death Tests you have made.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-knights-excelsior",
+      "name": "Knights Excelsior",
+      "faction": "Stormcast Eternals",
+      "page": 60,
+      "bonusName": "Storm of Annihilation",
+      "bonus": "When you undertake any Endeavour or direct action to reduce Doom, it decreases by 2 more. You have Greater Disadvantage on Guile and Intuition Tests against anyone with a dubious past (known criminals, anyone touched by Chaos).",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-celestial-warbringers",
+      "name": "Celestial Warbringers",
+      "faction": "Stormcast Eternals",
+      "page": 60,
+      "bonusName": "Fearless Foresight",
+      "bonus": "After finishing a Rest, you may declare you have foreseen this day, and it does not hold your true death. Melee and Accuracy increase one step until your next Rest. If you become Mortally Wounded that day, the Difficulty and Complexity of all Death Tests increase by 1.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-tempest-lords",
+      "name": "Tempest Lords",
+      "faction": "Stormcast Eternals",
+      "page": 61,
+      "bonusName": "Bonds of Noble Duty",
+      "bonus": "Allies have Advantage on diplomacy and leadership Tests when you accompany them. When you take the *Rally Followers* Endeavour (p. 120), gain automatic successes equal to your Soul.",
+      "referencesDowntime": [
+        "Rally Followers"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "stormcast-eternals-astral-templars",
+      "name": "Astral Templars",
+      "faction": "Stormcast Eternals",
+      "page": 61,
+      "bonusName": "Dauntless Hunters",
+      "bonus": "When tracking prey, double your Training for Awareness and Survival Tests, and have Advantage on any Opposed Tests. Once per turn, if a creature within Close Range moves to an adjacent Zone, you may use a Free Action to follow it.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-oakenbrow",
+      "name": "Oakenbrow",
+      "faction": "Sylvaneth",
+      "page": 64,
+      "bonusName": "A Yield to None",
+      "bonus": "Double your Training for any Test to resist effects that inflict Conditions. Advantage on Guile and Intimidation Tests during negotiations when trying to get your way.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-gnarlroot",
+      "name": "Gnarlroot",
+      "faction": "Sylvaneth",
+      "page": 64,
+      "bonusName": "Eldritch Secrets",
+      "bonus": "During character creation, you may create a spell as if you had successfully undertaken the *Create Spell* Endeavour (p. 157). You may cast it using Mind (Channelling), even without the Spellcasting Talent. The *Spellcasting (Jade)* Talent (p. 83) is added to your Archetype's Talent list.",
+      "referencesDowntime": [
+        "Create Spell"
+      ],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-harvestboon",
+      "name": "Harvestboon",
+      "faction": "Sylvaneth",
+      "page": 65,
+      "bonusName": "A Brighter Dawn",
+      "bonus": "When you undertake an Endeavour to reduce Doom, Doom reduces by 1 more. Advantage on Tests to inspire others and shake them from malaise.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-ironbark",
+      "name": "Ironbark",
+      "faction": "Sylvaneth",
+      "page": 65,
+      "bonusName": "Veins of Metal",
+      "bonus": "Natural Armour is 3 instead of 2, but you cannot benefit from Ironbark Oil (p. 109). Advantage on Tests to resist becoming Charmed or Frightened.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-winterleaf",
+      "name": "Winterleaf",
+      "faction": "Sylvaneth",
+      "page": 66,
+      "bonusName": "Winter's Bite",
+      "bonus": "When the Binding's Soulfire is lower than the current Doom, double your Training and Focus in Weapon Skill and Ballistic Skill, but your Defence decreases one step. Advantage on Intimidation Tests, and Disadvantage on all other social Tests.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-dreadwood",
+      "name": "Dreadwood",
+      "faction": "Sylvaneth",
+      "page": 66,
+      "bonusName": "The Shadow in the Forest",
+      "bonus": "Doom increases by 1, and can never be reduced below 2. **Malicious Tormentor** (second bullet on p. 66): when you kill a non-Minion enemy, your turn immediately ends, but your Melee increases one step until the end of combat. Usable once per combat.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    },
+    {
+      "id": "sylvaneth-heartwood",
+      "name": "Heartwood",
+      "faction": "Sylvaneth",
+      "page": 67,
+      "bonusName": "Call the Wild Hunt",
+      "bonus": "As a Free Action on your turn, call the Wild Hunt. You and allies in your Zone increase Melee and Speed one step. All of them decrease Defence one step. The effect lasts until the start of your next turn. Usable once per combat.",
+      "referencesDowntime": [],
+      "referencesChampionsOnlyTalents": [],
+      "referencesActions": [],
+      "referencesChampionsItems": []
+    }
+  ]
+}

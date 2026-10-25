@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Source: Corebook pp. 78–82 (Skill List). Attribute is the suggested pairing for Tests; the GM may allow others. Training and Focus each max 3 (see 11-advancement/advancement-costs.json). Optional GM rule p. 79: untrained characters cannot attempt Tests for specialised Skills (Arcana, Lore, etc.).",
+  "skills": [
+    {
+      "name": "Arcana",
+      "attribute": "Mind",
+      "page": 79
+    },
+    {
+      "name": "Athletics",
+      "attribute": "Body",
+      "page": 79
+    },
+    {
+      "name": "Awareness",
+      "attribute": "Mind",
+      "page": 79
+    },
+    {
+      "name": "Ballistic Skill",
+      "attribute": "Body",
+      "page": 80
+    },
+    {
+      "name": "Beast Handling",
+      "attribute": "Soul",
+      "page": 80
+    },
+    {
+      "name": "Channelling",
+      "attribute": "Mind",
+      "page": 80
+    },
+    {
+      "name": "Crafting",
+      "attribute": "Mind",
+      "page": 80
+    },
+    {
+      "name": "Determination",
+      "attribute": "Soul",
+      "page": 80
+    },
+    {
+      "name": "Devotion",
+      "attribute": "Soul",
+      "page": 80
+    },
+    {
+      "name": "Dexterity",
+      "attribute": "Body",
+      "page": 80
+    },
+    {
+      "name": "Entertain",
+      "attribute": "Soul",
+      "page": 81
+    },
+    {
+      "name": "Fortitude",
+      "attribute": "Body",
+      "page": 81
+    },
+    {
+      "name": "Guile",
+      "attribute": "Mind",
+      "page": 81
+    },
+    {
+      "name": "Intimidation",
+      "attribute": "Soul",
+      "page": 81
+    },
+    {
+      "name": "Intuition",
+      "attribute": "Mind",
+      "page": 81
+    },
+    {
+      "name": "Lore",
+      "attribute": "Mind",
+      "page": 81
+    },
+    {
+      "name": "Medicine",
+      "attribute": "Mind",
+      "page": 81
+    },
+    {
+      "name": "Might",
+      "attribute": "Body",
+      "page": 81
+    },
+    {
+      "name": "Nature",
+      "attribute": "Mind",
+      "page": 81
+    },
+    {
+      "name": "Reflexes",
+      "attribute": "Body",
+      "page": 81
+    },
+    {
+      "name": "Stealth",
+      "attribute": "Body",
+      "page": 82
+    },
+    {
+      "name": "Survival",
+      "attribute": "Mind",
+      "page": 82
+    },
+    {
+      "name": "Theology",
+      "attribute": "Mind",
+      "page": 82
+    },
+    {
+      "name": "Weapon Skill",
+      "attribute": "Body",
+      "page": 82
+    }
+  ],
+  "derived": {
+    "naturalAwareness": "(Mind + Training in Awareness) / 2, rounded up (Corebook p. 40 and the Natural Awareness rule).",
+    "initiative": "Mind + Training in Awareness + Training in Reflexes (Corebook p. 40)."
+  }
+}
