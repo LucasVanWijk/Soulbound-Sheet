@@ -1,0 +1,131 @@
+{
+  "currency": {
+    "unit": "D (drop of Aqua Ghyranis)",
+    "phial": 10,
+    "sphere": 100,
+    "consume": {
+      "drop": { "restoresToughness": 1 },
+      "phial": { "restoresToughness": 10, "removesConditions": 1 },
+      "sphere": { "restoresToughness": "all", "removesConditions": "all", "clearsWoundSpaces": 1 }
+    }
+  },
+  "availabilityLevels": ["Common", "Rare", "Exotic", "Special", "N/A"],
+  "melee": [
+    { "name": "Unarmed", "cost": null, "availability": "N/A", "damage": "+S", "traits": ["Ineffective"] },
+    { "name": "Improvised Weapon", "cost": null, "availability": "N/A", "damage": "+S", "traits": ["Ineffective", "Crushing|Piercing|Slashing"] },
+    { "name": "Battleaxe", "cost": 135, "availability": "Common", "damage": "1+S", "traits": ["Slashing"] },
+    { "name": "Club", "cost": 8, "availability": "Common", "damage": "+S", "traits": ["Crushing", "Subtle"] },
+    { "name": "Dagger", "cost": 20, "availability": "Common", "damage": "+S", "traits": ["Piercing", "Subtle", "Thrown (Short)"] },
+    { "name": "Finger Claws", "cost": 35, "availability": "Rare", "damage": "+S", "traits": ["Piercing", "Slashing", "Subtle"] },
+    { "name": "Greataxe", "cost": 250, "availability": "Common", "damage": "2+S", "traits": ["Slashing", "Two-handed"] },
+    { "name": "Greathammer", "cost": 260, "availability": "Common", "damage": "2+S", "traits": ["Crushing", "Two-handed"] },
+    { "name": "Greatscythe", "cost": 280, "availability": "Rare", "damage": "1+S", "traits": ["Cleave", "Slashing", "Two-handed"] },
+    { "name": "Greatsword", "cost": 265, "availability": "Common", "damage": "2+S", "traits": ["Slashing", "Two-handed"] },
+    { "name": "Halberd", "cost": 290, "availability": "Rare", "damage": "1+S", "traits": ["Piercing", "Rend", "Two-handed"] },
+    { "name": "Handaxe", "cost": 25, "availability": "Common", "damage": "+S", "traits": ["Slashing", "Subtle", "Thrown (Short)"] },
+    { "name": "Hand Hammer", "cost": 22, "availability": "Common", "damage": "+S", "traits": ["Crushing", "Subtle", "Thrown (Short)"] },
+    { "name": "Javelin", "cost": 45, "availability": "Common", "damage": "+S", "traits": ["Piercing", "Thrown (Medium)"] },
+    { "name": "Pick", "cost": 130, "availability": "Common", "damage": "1+S", "traits": ["Piercing"] },
+    { "name": "Pike", "cost": 190, "availability": "Common", "damage": "2+S", "traits": ["Piercing", "Reach", "Two-handed"] },
+    { "name": "Quarterstaff", "cost": 18, "availability": "Common", "damage": "1+S", "traits": ["Crushing", "Two-handed"] },
+    { "name": "Runic Iron", "cost": 320, "availability": "Exotic", "damage": "1+S", "traits": ["Piercing", "Rend"] },
+    { "name": "Spear", "cost": 180, "availability": "Common", "damage": "1+S", "traits": ["Piercing", "Thrown (Short)"] },
+    { "name": "Sword", "cost": 150, "availability": "Common", "damage": "1+S", "traits": ["Slashing"] },
+    { "name": "Warhammer", "cost": 140, "availability": "Common", "damage": "1+S", "traits": ["Crushing"] },
+    { "name": "Whip", "cost": 120, "availability": "Rare", "damage": "+S", "traits": ["Reach", "Restraining", "Slashing"] }
+  ],
+  "ranged": [
+    { "name": "Blunderbuss", "cost": 180, "availability": "Common", "damage": "2+S", "traits": ["Loud", "Range (Medium)", "Piercing", "Spread", "Two-handed"] },
+    { "name": "Bow", "cost": 50, "availability": "Common", "damage": "1+S", "traits": ["Range (Long)", "Subtle", "Piercing", "Two-handed"] },
+    { "name": "Great Crossbow", "cost": 250, "availability": "Rare", "damage": "1+S", "traits": ["Penetrating", "Piercing", "Range (Long)", "Reload", "Two-handed"] },
+    { "name": "Hand Cannon", "cost": 340, "availability": "Exotic", "damage": "2+S", "traits": ["Close", "Loud", "Piercing", "Range (Short)"] },
+    { "name": "Hand Crossbow", "cost": 35, "availability": "Common", "damage": "+S", "traits": ["Close", "Piercing", "Range (Medium)"] },
+    { "name": "Net", "cost": 45, "availability": "Common", "damage": null, "traits": ["Range (Short)", "Restraining"] },
+    { "name": "Pistol", "cost": 65, "availability": "Common", "damage": "1+S", "traits": ["Close", "Loud", "Piercing", "Range (Medium)"] },
+    { "name": "Repeater Handbow", "cost": 60, "availability": "Common", "damage": "+S", "traits": ["Close", "Piercing", "Range (Medium)", "Spread"] },
+    { "name": "Repeater Pistol", "cost": 95, "availability": "Rare", "damage": "1+S", "traits": ["Close", "Loud", "Piercing", "Range (Medium)", "Spread"] },
+    { "name": "Rifle", "cost": 210, "availability": "Common", "damage": "2+S", "traits": ["Loud", "Piercing", "Range (Long)", "Two-handed"] }
+  ],
+  "armour": [
+    { "name": "Light", "cost": 120, "availability": "Common", "requirement": null, "armour": 1, "traits": ["Subtle"] },
+    { "name": "Medium", "cost": 200, "availability": "Common", "requirement": { "attribute": "Body", "value": 2 }, "armour": 2, "traits": [] },
+    { "name": "Heavy", "cost": 350, "availability": "Rare", "requirement": { "attribute": "Body", "value": 4 }, "armour": 3, "traits": ["Loud"] },
+    { "name": "Shield", "cost": 180, "availability": "Common", "requirement": null, "defenceStepBonus": 1, "handsRequired": 1, "traits": [] }
+  ],
+  "armourRequirementFailure": { "speedStepPenalty": -1, "defenceStepPenalty": -1 },
+  "traits": {
+    "Aetheric": "Powered by aether-gold; almost exclusively Kharadron.",
+    "Blast (X)": "Deals X Damage to every creature in the Zone when it detonates.",
+    "Cleave": "Each 6 on the attack roll deals 1 Damage to all other enemies within Close Range.",
+    "Close": "Ranged weapon can attack at Close Range without an Accuracy penalty.",
+    "Crushing": "No effect alone; used by Talents such as Crushing Blow.",
+    "Defensive": "Defence increases one step when using this weapon.",
+    "Ineffective": "Target's Armour is doubled; can only deal Minor Wounds.",
+    "Loud": "Alerts everyone within Long Range when used to Attack; Loud armour gives Disadvantage on Body (Stealth).",
+    "Magical": "Unaffected by spells that transmute it; useful against mundane-resistant foes.",
+    "Penetrating": "Ignores 1 point of Armour.",
+    "Piercing": "No effect alone; used by Talents such as Pierce Armour.",
+    "Range (X)": "Ranged attack using Body (Ballistic Skill); X is Close, Short, Medium or Long.",
+    "Reach": "Attacks any target in your Zone without moving; works with Opportunist.",
+    "Reload": "Requires an Action to reload; ignored by Quick Reload.",
+    "Rend": "Each 6 on the attack roll permanently removes 1 Armour after the attack; the target still uses full Armour for this attack.",
+    "Restraining": "When Damage is dealt to a Large or smaller creature, it is Restrained until it uses an Action to free itself.",
+    "Sigmarite": "Unaffected by transmutation; Sigmarite armour cannot be Damaged by Rend unless the weapon is also Magical.",
+    "Slashing": "No effect alone; used by Talents such as Sever.",
+    "Spread": "Every creature within Close Range of the target takes half Damage; higher-Defence creatures there may DN 4:1 Body (Reflexes) opposed by your attack to avoid it.",
+    "Subtle": "Easily concealed; used with Backstab; Subtle armour can pass as everyday clothing.",
+    "Thrown (X)": "Melee weapon can also be thrown as a ranged attack at range X.",
+    "Two-handed": "Requires both hands."
+  },
+  "aetherRig": {
+    "basic": { "cost": 350, "availability": "Exotic", "powerCapacity": 6, "armour": 1, "maintenance": "Regular Maintenance Endeavour (p. 158); if skipped, Power Capacity -1 per adventure until maintained" },
+    "expandedPowerSupply": { "cost": 250, "availability": "Exotic", "powerCapacityBonus": 1, "maxPerRig": 2 },
+    "arkanautArmour": { "cost": 220, "availability": "Exotic", "armourPerPiece": 1, "powerConsumptionPerPiece": 1 }
+  },
+  "aetheric": [
+    { "name": "Aether-endrin", "cost": 600, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Endrineering", "dn": "5:6", "materials": 300 }, "damage": null, "traits": [], "effect": "Fly (Normal) Speed" },
+    { "name": "Aetheric Grenade", "cost": 85, "availability": "Exotic", "power": null, "craft": { "endeavour": "Aethercraft", "dn": "4:7", "materials": 45 }, "damage": null, "traits": ["Aetheric", "Blast (2)", "Loud", "Range (Medium)"] },
+    { "name": "Aetheric Lenses", "cost": 250, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Aethercraft", "dn": "5:5", "materials": 125 }, "damage": null, "traits": [], "effect": "Witch-Sight; +1d6 to Mind (Awareness); see through solid surfaces up to 5 ft" },
+    { "name": "Aethermatic Saw", "cost": 350, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Endrineering", "dn": "4:6", "materials": 175 }, "damage": "1+S", "traits": ["Aetheric", "Loud", "Rend", "Slashing"] },
+    { "name": "Aethermatic Volley Gun", "cost": 800, "availability": "Exotic", "power": 2, "craft": { "endeavour": "Endrineering", "dn": "4:8", "materials": 400 }, "damage": "2+S", "traits": ["Aetheric", "Loud", "Piercing", "Range (Long)", "Spread", "Two-handed"] },
+    { "name": "Aethermight Hammer", "cost": 680, "availability": "Exotic", "power": 1, "requires": ["Endrinharness"], "craft": { "endeavour": "Endrineering", "dn": "4:8", "materials": 340 }, "damage": "3+S", "traits": ["Aetheric", "Crushing", "Loud", "Two-handed"] },
+    { "name": "Atmospheric Anatomiser", "cost": 340, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Aethercraft", "dn": "4:7", "materials": 340 }, "damage": null, "traits": [], "effect": "Aetheric Augmentation (Action): +1 Damage to Aetheric weapons in Zone for 3 rounds" },
+    { "name": "Atmospheric Isolation", "cost": 160, "availability": "Exotic", "power": 2, "requires": ["Atmospheric Anatomiser"], "craft": { "endeavour": "Aethercraft", "dn": "4:8", "materials": 80 }, "damage": null, "traits": [], "effect": "Zone within Medium: Opposed Body (Fortitude) vs Mind (Crafting); failure = Damage equal to difference, ignores Armour" },
+    { "name": "Roar of Grungni", "cost": 180, "availability": "Exotic", "power": 2, "requires": ["Atmospheric Anatomiser"], "craft": { "endeavour": "Aethercraft", "dn": "4:9", "materials": 90 }, "damage": null, "traits": [], "effect": "Zone within Medium: Opposed Body (Fortitude) vs Mind (Crafting); failure = Damage equal to difference, Prone, Poisoned until start of your next turn" },
+    { "name": "Drill Launcher", "cost": 650, "availability": "Exotic", "power": 2, "craft": { "endeavour": "Endrineering", "dn": "4:13", "materials": 325 }, "damage": "2+S", "traits": ["Aetheric", "Blast (2)", "Loud", "Piercing", "Range (Long)", "Reload", "Two-handed"], "effect": "Ranged: bores in for 2+S, then explodes for 2 Damage to all in Zone. Needs replacement head after each use." },
+    { "name": "Replacement Drill Head", "cost": 110, "availability": "Exotic", "power": null, "craft": { "endeavour": "Endrineering", "dn": "4:7", "materials": 55 }, "damage": null, "traits": [] },
+    { "name": "Endrinharness", "cost": 500, "availability": "Exotic", "power": 2, "craft": { "endeavour": "Endrineering", "dn": "4:10", "materials": 250 }, "damage": null, "traits": [], "effect": "+1 Body when worn" },
+    { "name": "God's Eye", "cost": 410, "availability": "Exotic", "power": 2, "craft": { "endeavour": "Endrineering", "dn": "5:7", "materials": 205 }, "damage": "1+S", "traits": ["Aetheric", "Penetrating", "Range (Medium)"] },
+    { "name": "Grapnel Launcher", "cost": 180, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Endrineering", "dn": "4:6", "materials": 90 }, "damage": "+S", "traits": ["Aetheric", "Loud", "Range (Long)", "Restraining", "Slashing", "Two-handed"], "effect": "Automatic success on Climb when attached" },
+    { "name": "Heavy Instruments", "cost": 220, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Aethercraft", "dn": "4:5", "materials": 110 }, "damage": "1+S", "traits": ["Aetheric", "Crushing"] },
+    { "name": "Quadbreather", "cost": 180, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Aethercraft", "dn": "5:6", "materials": 90 }, "damage": null, "traits": [], "effect": "Immune to airborne poisons, toxins and illnesses; DN 4:1 Mind (Awareness) to detect aether-gold within 1,000 ft" },
+    { "name": "Rapid-fire Rivet Gun", "cost": 160, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Endrineering", "dn": "4:6", "materials": 80 }, "damage": "1+S", "traits": ["Aetheric", "Loud", "Piercing", "Range (Medium)", "Spread"] },
+    { "name": "Skyhook", "cost": 210, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Endrineering", "dn": "4:7", "materials": 105 }, "damage": "+S", "traits": ["Aetheric", "Loud", "Penetrating", "Piercing", "Range (Long)", "Two-handed"], "effect": "Free Action recoil after Damage: self-pull to Close Range, or Opposed Body (Might) to pull target" },
+    { "name": "Skymines", "cost": 160, "availability": "Exotic", "power": null, "craft": { "endeavour": "Aethercraft", "dn": "4:8", "materials": 80 }, "damage": null, "traits": ["Aetheric", "Blast (4)", "Loud", "Range (Short)"], "effect": "Explodes when a creature enters Close Range, or after 1-3 rounds if timed" },
+    { "name": "Vulcaniser Pistol", "cost": 240, "availability": "Exotic", "power": 1, "craft": { "endeavour": "Aethercraft", "dn": "5:6", "materials": 120 }, "damage": "1+S", "traits": ["Aetheric", "Loud", "Piercing", "Range (Medium)", "Rend"] }
+  ],
+  "sampleRigs": {
+    "Aether-Khemist's Rig": { "items": ["Basic Aether-rig", "Aetheric Lenses", "Atmospheric Anatomiser", "Heavy Instruments", "Quadbreather"], "choose": [["Atmospheric Isolation", "Roar of Grungni"]] },
+    "Endrinmaster's Rig": { "items": ["Basic Aether-rig", "Aethermight Hammer", "Arkanaut Armour", "Endrinharness", "God's Eye"], "choose": [] },
+    "Endrinrigger's Rig": { "items": ["Basic Aether-rig", "Aether-endrin", "Aethermatic Saw", "Arkanaut Armour", "Rapid-fire Rivet Gun"], "choose": [["Aethermatic Volley Gun", "Drill Launcher"]] },
+    "Skywarden's Rig": { "items": ["Basic Aether-rig", "Aether-endrin", "Arkanaut Armour", "Vulcaniser Pistol"], "choose": [["Grapnel Launcher", "Skyhook"], ["Aethermatic Volley Gun", "Drill Launcher"]] }
+  },
+  "ur-goldRunes": {
+    "rules": {
+      "maxActive": "Soul",
+      "stacking": "Same-type runes are cumulative",
+      "activation": "Awakened in battle; activates when determining Initiative; no benefit if Surprised",
+      "duration": "One adventure (about 3-5 sessions), then inert",
+      "addMore": "Grundtogg Endeavour (requires Smith's Tools)"
+    },
+    "runes": {
+      "Awakened Steel": "Any weapon you wield has the Rend Trait",
+      "Farsight": "Accuracy +1 step",
+      "Fiery Determination": "+1 Wound space",
+      "Fury": "Melee +1 step",
+      "Iron Skin": "Armour 1 (each active Rune of Iron Skin +1 Armour; no effect while wearing armour)",
+      "Relentless Zeal": "Initiative bonus equal to Soul",
+      "Searing Heat": "All attacks deal +1 Damage"
+    }
+  }
+}

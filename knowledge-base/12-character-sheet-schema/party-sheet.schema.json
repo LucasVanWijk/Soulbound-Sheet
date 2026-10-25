@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "soulbound/party-sheet.schema.json",
+  "title": "Soulbound Party Sheet (the Binding)",
+  "description": "Shared state of a party. Corebook p. 345 and rules pp. 131-134.",
+  "type": "object",
+  "required": ["partyName", "soulfire", "doom"],
+  "properties": {
+    "partyName": { "type": "string" },
+    "members": {
+      "type": "array",
+      "items": { "type": "string", "description": "Character ID. Stormcast Eternals count as members but cannot use Soulfire" }
+    },
+    "soulfire": {
+      "type": "object",
+      "required": ["current", "max"],
+      "properties": {
+        "current": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 0, "description": "Equals number of non-Stormcast members, unless raised by GM for a great deed" }
+      }
+    },
+    "doom": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Starts at 1; never below 1. Printed track shows 1-10"
+    },
+    "shortTermGoals": { "type": "array", "items": { "type": "string" } },
+    "longTermGoals": { "type": "array", "items": { "type": "string" } },
+    "allies": { "type": "array", "items": { "type": "string" } },
+    "enemies": { "type": "array", "items": { "type": "string" } },
+    "resources": { "type": "array", "items": { "type": "string" } },
+    "rumours": { "type": "array", "items": { "type": "string" } },
+    "fears": { "type": "array", "items": { "type": "string" } },
+    "threats": { "type": "array", "items": { "type": "string" } }
+  }
+}

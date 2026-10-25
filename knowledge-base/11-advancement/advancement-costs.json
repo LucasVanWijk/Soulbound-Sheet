@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Source: Corebook p. 41 (Advancement cost tables), pp. 89–93 (Lores, Miracles), Talents p. 82 (2 XP per Talent). Costs are XP to spend on the character after creation. Only these costs are enforced by the app (see README).",
+  "currency": "XP",
+  "attributes": {
+    "min": 1,
+    "max": 8,
+    "costs": [
+      { "from": 1, "to": 2, "incremental": 2, "total": 2 },
+      { "from": 2, "to": 3, "incremental": 5, "total": 7 },
+      { "from": 3, "to": 4, "incremental": 7, "total": 14 },
+      { "from": 4, "to": 5, "incremental": 9, "total": 23 },
+      { "from": 5, "to": 6, "incremental": 11, "total": 34 },
+      { "from": 6, "to": 7, "incremental": 13, "total": 47 },
+      { "from": 7, "to": 8, "incremental": 15, "total": 62 }
+    ],
+    "rule": "Buying an Attribute increase costs the incremental cost of the step. Total cost to reach N from 1 is the cumulative total in the table."
+  },
+  "skills": {
+    "training": {
+      "min": 0,
+      "max": 3,
+      "costs": [
+        { "level": 1, "incremental": 1, "total": 1 },
+        { "level": 2, "incremental": 2, "total": 3 },
+        { "level": 3, "incremental": 4, "total": 7 }
+      ]
+    },
+    "focus": {
+      "min": 0,
+      "max": 3,
+      "costs": [
+        { "level": 1, "incremental": 1, "total": 1 },
+        { "level": 2, "incremental": 2, "total": 3 },
+        { "level": 3, "incremental": 4, "total": 7 }
+      ]
+    },
+    "rule": "Training and Focus are bought separately. Each has its own max of 3. Book example (p. 41, Vel) buys Focus in Theology with no Training in it, so Focus is not gated by Training."
+  },
+  "talents": {
+    "baseCost": 2,
+    "rule": "Each Talent costs 2 XP. Some Talents can be taken more than once (see talents.json, field repeatable). Requirements (Species, Archetype, Attribute, Training/Focus) are DM-enforced in this app."
+  },
+  "lores": {
+    "$comment": "Taking the Spellcasting Talent (2 XP) gives the first Lore. Each additional Lore costs the extra amount below on top of the Talent cost. Requirements are Channelling Training/Focus or Mind rating; DM-enforced.",
+    "firstLoreExtra": 0,
+    "additionalLoreExtra": [
+      { "lore": 2, "extra": 2, "requirement": "Training (2) or Focus (2) in Channelling" },
+      { "lore": 3, "extra": 3, "requirement": "Training (2) and Focus (2) in Channelling" },
+      { "lore": 4, "extra": 4, "requirement": "Training (3) or Focus (3) in Channelling" },
+      { "lore": 5, "extra": 5, "requirement": "Training (3) and Focus (3) in Channelling" },
+      { "lore": 6, "extra": 6, "requirement": "Mind 6" },
+      { "lore": 7, "extra": 7, "requirement": "Mind 7" },
+      { "lore": 8, "extra": 8, "requirement": "Mind 8" }
+    ],
+    "perLoreNote": "Each additional Lore also grants one new spell of that Lore when learned."
+  },
+  "miracles": {
+    "firstMiracleCost": 0,
+    "firstMiracleNote": "The first Miracle is chosen when the Blessed Talent is taken (the Talent costs 2 XP).",
+    "additionalMiracleCost": 2,
+    "rule": "Each new Miracle after the first costs 2 XP."
+  },
+  "notInApp": [
+    "Learn Spell, Magical Weapon Weave, Create Spell, Forge Ur-Gold Rune and other Endeavours are downtime. The DM handles them; the player adds the result to the sheet.",
+    "Retirement and Experienced Heroes bonus XP: handled by the DM."
+  ]
+}
